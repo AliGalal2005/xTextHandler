@@ -21,17 +21,20 @@ Xcode Source Editor Extension Toolset
 - Escape
 
 ## xRadix
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xRadix.gif)
 - Hex
 - Bin
 - Oct
 - Dec
 
 ## xColor
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xColor.gif)
 - Hex
 - RGB
 - Preview
 
 ## xSearch
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xSearch.gif)
 - Google
 - Translate
 - Developer
@@ -39,6 +42,7 @@ Xcode Source Editor Extension Toolset
 - GitHub
 
 ## xFormat
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xFormat.gif)
 - JSON
 
 # Usage
