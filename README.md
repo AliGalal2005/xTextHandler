@@ -6,6 +6,8 @@ Xcode Source Editor Extension Toolset
 
 # Features
 
+# Extensions
+
 ## xEncode
 - Base64 Encode
 - Base64 Decode
@@ -41,6 +43,9 @@ Xcode Source Editor Extension Toolset
 1. Install Xcode 8
 2. Build & Run
 3. Choose Xcode to debug
+4. Select text you want
+5. Find extension in Editor menu
+6. You can set a shortcut for each extension
 
 # Tips
 Xcode 8 Beta is completely unstable now, you may see nothing after you build this project
