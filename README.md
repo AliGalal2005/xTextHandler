@@ -5,7 +5,7 @@ Xcode Source Editor Extension Toolset
 [Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools, improve text editing for Xcode
 
 # Features
-- Multiline selection
+- Multiline Selection
 - Extendable API
 - Regular Expression Matching
 
