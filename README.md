@@ -10,6 +10,7 @@ Xcode Source Editor Extension Toolset
 - Regular Expression Matching
 
 ## xEncode
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xEncode.gif)
 - Base64 Encode
 - Base64 Decode
 - URL Encode
