@@ -54,7 +54,7 @@ Xcode Source Editor Extension Toolset
 6. You can set a shortcut for each extension
 
 # How to write a new Extension
-1. Add definition in Plist:
+### Add definition in Plist:
 ```xml
 <dict>
     <key>XCSourceEditorCommandClassName</key>
@@ -65,7 +65,7 @@ Xcode Source Editor Extension Toolset
     <string>Test Extension</string>
 </dict>
 ```
-2. Implement handlers in class:
+### Implement handlers in class:
 ```objc
 // implement your modify strategy using block (you can implement as singleton dict)
 - (NSDictionary *)handlers {
@@ -79,9 +79,9 @@ Xcode Source Editor Extension Toolset
     return _instance;
 }
 ```
-3. Handle with regex:
+### Handle with regex:
 ```objc
-// override this method like that
+// override performCommandWithInvocation like that
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
     [xTextModifier select:invocation pattern:@"regex" handler:self.handlers[invocation.commandIdentifier]];
     completionHandler(nil);
