@@ -25,6 +25,11 @@
         
         // match clipped text
         xTextMatchResult *match = [xTextMatcher match:range invocation:invocation];
+        
+        if (match.text.length == 0) {
+            continue;
+        }
+        
         NSMutableArray<NSString *> *texts = [NSMutableArray array];
         
         if (regex) { // match using regex

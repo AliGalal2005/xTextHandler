@@ -33,7 +33,12 @@ typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSStri
     NSInteger startLine = selection.start.line;
     NSInteger startColumn = selection.start.column;
     NSInteger endLine = selection.end.line;
-    NSInteger endColumn = selection.end.column + 1; // ??
+    NSInteger endColumn = selection.end.column;
+    
+    // return if selected nothing
+    if (startLine == endLine && startColumn == endColumn) {
+        return;
+    }
     
     for (NSInteger index=startLine; index<=endLine; ++index) {
         
@@ -41,11 +46,11 @@ typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSStri
         NSString *clipped;
         
         if (startLine == endLine) { // single line
-            clipped = [line substringWithRange:NSMakeRange(startColumn, endColumn-startColumn)];
+            clipped = [line substringWithRange:NSMakeRange(startColumn, endColumn-startColumn+1)];
         } else if (index == startLine) { // first line
             clipped = [line substringFromIndex:startColumn];
         } else if (index == endLine) { // last line
-            clipped = [line substringToIndex:endColumn];
+            clipped = [line substringToIndex:endColumn+1];
         } else { // common line
             clipped = line;
         }
