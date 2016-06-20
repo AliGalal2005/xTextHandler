@@ -8,7 +8,6 @@
 
 #import "xFormatCommand.h"
 #import "xFormat.h"
-#import "xTextModifier.h"
 
 @implementation xFormatCommand
 
@@ -21,11 +20,6 @@
         };
     });
     return _instance;
-}
-
-- (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
-    [xTextModifier any:invocation handler:self.class.handlers[invocation.commandIdentifier]];
-    completionHandler(nil);
 }
 
 @end

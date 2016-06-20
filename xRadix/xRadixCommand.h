@@ -6,8 +6,8 @@
 //  Copyright © 2016年 cyan. All rights reserved.
 //
 
-#import "xTextProtocol.h"
+#import "xTextCommand.h"
 
-@interface xRadixCommand : NSObject <xTextProtocol>
+@interface xRadixCommand : xTextCommand
 
 @end

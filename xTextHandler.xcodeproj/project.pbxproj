@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873F9E551D1782250092EB45 /* xTextCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F9E531D1782210092EB45 /* xTextCommand.m */; };
+		873F9E561D1782260092EB45 /* xTextCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F9E531D1782210092EB45 /* xTextCommand.m */; };
+		873F9E571D1782270092EB45 /* xTextCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F9E531D1782210092EB45 /* xTextCommand.m */; };
+		873F9E581D1782270092EB45 /* xTextCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F9E531D1782210092EB45 /* xTextCommand.m */; };
+		873F9E591D1782280092EB45 /* xTextCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F9E531D1782210092EB45 /* xTextCommand.m */; };
 		8764E7051D14F6AE001C1524 /* xTextMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8764E7031D14F6AA001C1524 /* xTextMatcher.m */; };
 		8764E7091D14FE13001C1524 /* xTextModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 8764E7071D14FDC6001C1524 /* xTextModifier.m */; };
 		87A709B01D151C10004F6152 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D8F0B11D14D037009DA1EE /* Cocoa.framework */; };
@@ -113,6 +118,8 @@
 
 /* Begin PBXFileReference section */
 		873BF9FB1D15068C0026BFB4 /* xEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xEncode.h; sourceTree = "<group>"; };
+		873F9E521D1782210092EB45 /* xTextCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xTextCommand.h; sourceTree = "<group>"; };
+		873F9E531D1782210092EB45 /* xTextCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xTextCommand.m; sourceTree = "<group>"; };
 		8764E7021D14F6AA001C1524 /* xTextMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xTextMatcher.h; sourceTree = "<group>"; };
 		8764E7031D14F6AA001C1524 /* xTextMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xTextMatcher.m; sourceTree = "<group>"; };
 		8764E7061D14FDC6001C1524 /* xTextModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xTextModifier.h; sourceTree = "<group>"; };
@@ -332,6 +339,8 @@
 				8764E7031D14F6AA001C1524 /* xTextMatcher.m */,
 				8764E7061D14FDC6001C1524 /* xTextModifier.h */,
 				8764E7071D14FDC6001C1524 /* xTextModifier.m */,
+				873F9E521D1782210092EB45 /* xTextCommand.h */,
+				873F9E531D1782210092EB45 /* xTextCommand.m */,
 			);
 			path = xLibrary;
 			sourceTree = "<group>";
@@ -641,6 +650,7 @@
 				87A709C11D151C28004F6152 /* xTextMatcher.m in Sources */,
 				87A709C21D151C28004F6152 /* xTextModifier.m in Sources */,
 				87A709B61D151C10004F6152 /* xRadixExtension.m in Sources */,
+				873F9E561D1782260092EB45 /* xTextCommand.m in Sources */,
 				87A709B91D151C10004F6152 /* xRadixCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +672,7 @@
 				87DDF2C91D14D51700C4EB11 /* xEncodeExtension.m in Sources */,
 				8764E7091D14FE13001C1524 /* xTextModifier.m in Sources */,
 				87DDF2CC1D14D51700C4EB11 /* xEncodeCommand.m in Sources */,
+				873F9E551D1782250092EB45 /* xTextCommand.m in Sources */,
 				8764E7051D14F6AE001C1524 /* xTextMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,6 +684,7 @@
 				87F1959A1D16B30800E2F8D2 /* xTextModifier.m in Sources */,
 				87F1958E1D16B1F800E2F8D2 /* xSearchExtension.m in Sources */,
 				87F1959B1D16B31200E2F8D2 /* xTextMatcher.m in Sources */,
+				873F9E581D1782270092EB45 /* xTextCommand.m in Sources */,
 				87F195911D16B1F800E2F8D2 /* xSearchCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,6 +696,7 @@
 				87F195B51D16BC4A00E2F8D2 /* xTextMatcher.m in Sources */,
 				87F195A71D16BABD00E2F8D2 /* xFormatExtension.m in Sources */,
 				87F195B61D16BC4A00E2F8D2 /* xTextModifier.m in Sources */,
+				873F9E591D1782280092EB45 /* xTextCommand.m in Sources */,
 				87F195AA1D16BABD00E2F8D2 /* xFormatCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +708,7 @@
 				87F33BFC1D15A80500FD5772 /* xTextMatcher.m in Sources */,
 				87F33BFD1D15A80500FD5772 /* xTextModifier.m in Sources */,
 				87F33BF11D15A7F500FD5772 /* xColorExtension.m in Sources */,
+				873F9E571D1782270092EB45 /* xTextCommand.m in Sources */,
 				87F33BF41D15A7F500FD5772 /* xColorCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1034,6 +1048,7 @@
 				87F195981D16B1F800E2F8D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87F195AF1D16BABD00E2F8D2 /* Build configuration list for PBXNativeTarget "xFormat" */ = {
 			isa = XCConfigurationList;
@@ -1042,6 +1057,7 @@
 				87F195B11D16BABD00E2F8D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87F33BFB1D15A7F500FD5772 /* Build configuration list for PBXNativeTarget "xColor" */ = {
 			isa = XCConfigurationList;

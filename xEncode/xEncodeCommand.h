@@ -6,8 +6,8 @@
 //  Copyright © 2016年 cyan. All rights reserved.
 //
 
-#import "xTextProtocol.h"
+#import "xTextCommand.h"
 
-@interface xEncodeCommand : NSObject <xTextProtocol>
+@interface xEncodeCommand : xTextCommand
 
 @end
