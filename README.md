@@ -106,4 +106,6 @@ Since Xcode 8.0 beta (8S128d) is totally unstable now, you may see nothing after
 # Contacts
 Weibo: [@StackOverflowError](http://weibo.com/0x00eeee/)
 
+Twitter: [@cyanapps](https://twitter.com/cyanapps)
+
 Email: [log.e@qq.com](mailto:log.e@qq.com)
