@@ -14,7 +14,7 @@ static inline NSDictionary *Engines() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = @{
-            @"google": @"https://www.google.com/?q=%@",
+            @"google": @"https://www.google.com/#newwindow=1&q=%@",
             @"developer": @"https://developer.apple.com/search/?q=%@",
             @"translate": @"http://translate.google.cn/?hl=en#en/zh-CN/%@",
             @"stackoverflow": @"http://stackoverflow.com/search?q=%@",
