@@ -11,7 +11,7 @@
 
 @implementation xFormatCommand
 
-+ (NSDictionary *)handlers {
+- (NSDictionary *)handlers {
     static NSDictionary *_instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

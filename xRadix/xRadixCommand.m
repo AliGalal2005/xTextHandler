@@ -12,7 +12,7 @@
 
 @implementation xRadixCommand
 
-+ (NSDictionary *)handlers {
+- (NSDictionary *)handlers {
     static NSDictionary *_instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -27,7 +27,7 @@
 }
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
-    [xTextModifier radix:invocation handler:self.class.handlers[invocation.commandIdentifier]];
+    [xTextModifier radix:invocation handler:self.handlers[invocation.commandIdentifier]];
     completionHandler(nil);
 }
 

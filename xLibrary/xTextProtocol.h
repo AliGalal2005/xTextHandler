@@ -10,6 +10,14 @@
 
 @protocol xTextProtocol <NSObject, XCSourceEditorCommand>
 
-+ (NSDictionary *)handlers;
+
+/**
+ Handlers map
+ 
+ See xEncodeCommand.m for details
+
+ @return @{ @"commandIdentifier": NSString *(^handler)(NSString *text) }
+ */
+- (NSDictionary *)handlers;
 
 @end

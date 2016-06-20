@@ -20,6 +20,14 @@ typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSStri
 
 @implementation xTextMatcher
 
+
+/**
+ Enumerate lines in XCSourceEditorCommandInvocation
+
+ @param invocation XCSourceEditorCommandInvocation
+ @param selection  XCSourceTextRange
+ @param block      (index, line, clipped)
+ */
 + (void)enumerate:(XCSourceEditorCommandInvocation *)invocation selection:(XCSourceTextRange *)selection lineBlock:(xTextSelectionLineBlock)block {
     
     NSInteger startLine = selection.start.line;
@@ -38,7 +46,7 @@ typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSStri
             clipped = [line substringFromIndex:startColumn];
         } else if (index == endLine) { // last line
             clipped = [line substringToIndex:endColumn];
-        } else {
+        } else { // common line
             clipped = line;
         }
         
@@ -56,6 +64,7 @@ typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSStri
     
     NSMutableString *lineText = [NSMutableString string];
     NSMutableString *clippedText = [NSMutableString string];
+    
     [xTextMatcher enumerate:invocation selection:selection lineBlock:^(NSInteger index, NSString *line, NSString *clipped) {
         [lineText appendString:line];
         [clippedText appendString:clipped];

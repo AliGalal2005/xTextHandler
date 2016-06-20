@@ -12,7 +12,7 @@
 
 @implementation xColorCommand
 
-+ (NSDictionary *)handlers {
+- (NSDictionary *)handlers {
     static NSDictionary *_instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -28,7 +28,7 @@
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
     
     NSString *identifier = invocation.commandIdentifier;
-    NSString *(^handler)(NSString *text) = self.class.handlers[identifier];
+    NSString *(^handler)(NSString *text) = self.handlers[identifier];
     
     if ([identifier hasSuffix:@"hex"]) {
         [xTextModifier rgb:invocation handler:handler];

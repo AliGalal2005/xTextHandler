@@ -11,12 +11,28 @@
 
 @implementation xTextCommand
 
-+ (NSDictionary *)handlers {
-    return nil;
+
+/**
+ Handlers map
+
+ @return implement in subclass
+ */
+- (NSDictionary *)handlers {
+    return @{};
 }
 
+
+/**
+ Texts handling method
+ 
+ If you want to match any text, do nothing in subclass
+ If you want to match text with your pattern, override this method in subclass
+
+ @param invocation        XCSourceEditorCommandInvocation
+ @param completionHandler nil or Error
+ */
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
-    [xTextModifier any:invocation handler:self.class.handlers[invocation.commandIdentifier]];
+    [xTextModifier any:invocation handler:self.handlers[invocation.commandIdentifier]];
     completionHandler(nil);
 }
 

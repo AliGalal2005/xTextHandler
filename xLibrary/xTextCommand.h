@@ -8,6 +8,10 @@
 
 #import "xTextProtocol.h"
 
+
+/**
+ Subclassing xTextCommand to implement a command for Extension
+ */
 @interface xTextCommand : NSObject<xTextProtocol>
 
 @end
