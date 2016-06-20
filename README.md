@@ -92,7 +92,7 @@ Xcode Source Editor Extension Toolset
 ```
 
 # Tips
-Xcode 8 Beta is completely unstable now, you may see nothing after you build this project :(
+Since Xcode 8.0 beta (8S128d) is totally unstable now, you may see nothing after you build & run this project :(
 
 # Contacts
 Weibo: [@StackOverflowError](http://weibo.com/0x00eeee/)
