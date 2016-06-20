@@ -2,10 +2,11 @@
 Xcode Source Editor Extension Toolset
 
 # What is it
-[Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools, improve text editing for Xcode
+[Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools, improve text editing experience for Xcode 8
 
 # Features
-- Multiline Selection
+- Multiline Selections
+- Multiple Extensions
 - Extendable API
 - Regular Expression Matching
 
@@ -51,7 +52,7 @@ Xcode Source Editor Extension Toolset
 3. Choose Xcode to debug
 4. Select text
 5. Open Editor menu to find extensions
-6. You can set a shortcut for each extension
+6. You can set a shortcut (Key-Binding) for each extension
 
 # How to write a new Extension
 ### Add definition in Plist:
@@ -65,9 +66,10 @@ Xcode Source Editor Extension Toolset
     <string>Test Extension</string>
 </dict>
 ```
-### Implement handlers in class:
+### Map handlers in class:
 ```objc
 // implement your modify strategy using block (you can implement as singleton dict)
+// @{ @"commandIdentifier": handlerBlock }
 - (NSDictionary *)handlers {
     static NSDictionary *_instance;
     static dispatch_once_t onceToken;
