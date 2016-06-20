@@ -97,4 +97,4 @@ Xcode 8 Beta is completely unstable now, you may see nothing after you build thi
 # Contacts
 Weibo: [@StackOverflowError](http://weibo.com/0x00eeee/)
 
-Email: [log.e@qq.com](mailto://log.e@qq.com)
+Email: [log.e@qq.com](mailto:log.e@qq.com)
