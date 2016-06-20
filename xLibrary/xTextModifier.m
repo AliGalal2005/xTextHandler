@@ -13,9 +13,12 @@
 
 + (void)select:(XCSourceEditorCommandInvocation *)invocation pattern:(NSString *)pattern handler:(xTextHandlerBlock)handler {
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern
-                                                                           options:0
-                                                                             error:nil];
+    NSRegularExpression *regex;
+    if (![pattern isEqualToString:xTextHandlerAnyPattern]) {
+        regex = [NSRegularExpression regularExpressionWithPattern:pattern
+                                                          options:0
+                                                            error:nil];
+    }
 
     // enumerate selections
     for (XCSourceTextRange *range in invocation.buffer.selections) {
@@ -24,12 +27,12 @@
         xTextMatchResult *match = [xTextMatcher match:range invocation:invocation];
         NSMutableArray<NSString *> *texts = [NSMutableArray array];
         
-        if ([pattern isEqualToString:xTextHandlerAnyPattern]) { // match all
-            [texts addObject:[match.text substringWithRange:match.range]];
-        } else { // match using regex
+        if (regex) { // match using regex
             [regex enumerateMatchesInString:match.text options:0 range:match.range usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
                 [texts addObject:[match.text substringWithRange:[result rangeAtIndex:1]]];
             }];
+        } else { // match all
+            [texts addObject:[match.text substringWithRange:match.range]];
         }
         
         if (texts.count == 0) { // filter empty case
