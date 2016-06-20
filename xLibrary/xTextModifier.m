@@ -42,7 +42,10 @@
         NSMutableString *replace = match.text.mutableCopy;
         for (NSString *text in texts) {
             // replace each matched text with handler block
-            [replace replaceOccurrencesOfString:text withString:handler(text) options:0 range:NSMakeRange(0, replace.length)];
+            NSRange range = [replace rangeOfString:text];
+            if (range.location != NSNotFound) { // ensure replace only once
+                [replace replaceCharactersInRange:range withString:handler(text)];
+            }
         }
         
         // separate text to lines using newline charset
