@@ -53,5 +53,40 @@ Xcode Source Editor Extension Toolset
 5. Open Editor menu to find extensions
 6. You can set a shortcut for each extension
 
+# How to write a new Extension
+1. Add definition in Plist:
+```xml
+<dict>
+    <key>XCSourceEditorCommandClassName</key>
+    <string>aClassName</string>
+    <key>XCSourceEditorCommandIdentifier</key>
+    <string>test.extension</string>
+    <key>XCSourceEditorCommandName</key>
+    <string>Test Extension</string>
+</dict>
+```
+2. Implement handlers in class:
+```objc
+// implement your modify strategy using block (you can implement as singleton dict)
+- (NSDictionary *)handlers {
+    static NSDictionary *_instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = @{
+            @"test.extension": ^NSString *(NSString *text) { return text; }
+        };
+    });
+    return _instance;
+}
+```
+3. Handle with regex:
+```objc
+// override this method like that
+- (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
+    [xTextModifier select:invocation pattern:@"regex" handler:self.handlers[invocation.commandIdentifier]];
+    completionHandler(nil);
+}
+```
+
 # Tips
 Xcode 8 Beta is completely unstable now, you may see nothing after you build this project
