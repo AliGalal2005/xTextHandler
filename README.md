@@ -2,7 +2,7 @@
 Xcode Source Editor Extension Toolset
 
 # What is it
-[Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools, improve text editing experience for Xcode 8
+[Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools, improve text editing experience for Xcode 8, you can extend with simple code
 
 # Features
 - Multiline Selections
@@ -53,6 +53,7 @@ Xcode Source Editor Extension Toolset
 4. Select text
 5. Open Editor menu to find extensions
 6. You can set a shortcut (Key-Binding) for each extension
+7. Maybe you will like this [WWDC Session](https://developer.apple.com/videos/play/wwdc2016/414/)
 
 # How to write a new Extension
 ### Add definition in Plist:
@@ -68,7 +69,7 @@ Xcode Source Editor Extension Toolset
 ```
 ### Map handlers in class:
 ```objc
-// implement your modify strategy using block (you can implement as singleton dict)
+// Implement your modify strategy using block (you can implement as singleton dict)
 // @{ @"commandIdentifier": handlerBlock }
 - (NSDictionary *)handlers {
     static NSDictionary *_instance;
@@ -83,7 +84,7 @@ Xcode Source Editor Extension Toolset
 ```
 ### Handle with regex:
 ```objc
-// override performCommandWithInvocation like that
+// Override performCommandWithInvocation like that
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
     [xTextModifier select:invocation pattern:@"regex" handler:self.handlers[invocation.commandIdentifier]];
     completionHandler(nil);
@@ -91,4 +92,9 @@ Xcode Source Editor Extension Toolset
 ```
 
 # Tips
-Xcode 8 Beta is completely unstable now, you may see nothing after you build this project
+Xcode 8 Beta is completely unstable now, you may see nothing after you build this project :(
+
+# Contacts
+Weibo: [@StackOverflowError](http://weibo.com/0x00eeee/)
+
+Email: [log.e@qq.com](mailto://log.e@qq.com)
