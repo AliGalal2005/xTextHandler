@@ -38,38 +38,38 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>Google</string>
 				</dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xSearchCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xsearch.translate</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Translate</string>
-                </dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xSearchCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xsearch.developer</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Developer</string>
-                </dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xSearchCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xsearch.stackoverflow</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>StackOverflow</string>
-                </dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xSearchCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xsearch.github</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Github</string>
-                </dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xSearchCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xsearch.translate</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Translate</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xSearchCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xsearch.developer</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Developer</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xSearchCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xsearch.stackoverflow</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>StackOverflow</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xSearchCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xsearch.github</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>GitHub</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>xSearchExtension</string>
