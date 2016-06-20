@@ -104,4 +104,6 @@ Xcode Source Editor 插件集
 # 联系方式
 Weibo: [@StackOverflowError](http://weibo.com/0x00eeee/)
 
+Twitter: [@cyanapps](https://twitter.com/cyanapps)
+
 Email: [log.e@qq.com](mailto:log.e@qq.com)
