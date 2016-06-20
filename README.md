@@ -1,4 +1,4 @@
-[中文介绍](https://github.com/cyanzhong/xTextHandler/blob/master/README_CN.md)
+[🇨🇳中文介绍](https://github.com/cyanzhong/xTextHandler/blob/master/README_CN.md)
 
 # xTextHandler
 Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
