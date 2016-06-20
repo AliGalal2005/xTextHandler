@@ -93,6 +93,13 @@ Xcode Source Editor Extension Toolset
 }
 ```
 
+# TODO
+- More strategy for xFormat
+- Clipboard text support
+- Error handling
+- Preferences panel
+- JavaScript for text handling
+
 # Tips
 Since Xcode 8.0 beta (8S128d) is totally unstable now, you may see nothing after you build & run this project :(
 
