@@ -42,9 +42,9 @@
         NSMutableString *replace = match.text.mutableCopy;
         for (NSString *text in texts) {
             // replace each matched text with handler block
-            NSRange range = [replace rangeOfString:text];
-            if (range.location != NSNotFound) { // ensure replace only once
-                [replace replaceCharactersInRange:range withString:handler(text)];
+            NSRange textRange = [replace rangeOfString:text];
+            if (textRange.location != NSNotFound) { // ensure replace only once
+                [replace replaceCharactersInRange:textRange withString:handler(text)];
             }
         }
         
