@@ -91,6 +91,13 @@ Xcode Source Editor 插件集
 }
 ```
 
+# TODO
+- 更多的格式化策略
+- 剪贴板文本支持
+- 错误处理
+- App 配置面板
+- JavaScript 组件
+
 # 温馨提示
 因为目前 Xcode 8.0 beta (8S128d) 是非常不稳定的，你在编译运行项目后可能在 Editor 里面找不到菜单 :(
 
