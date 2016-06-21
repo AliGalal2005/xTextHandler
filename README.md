@@ -70,7 +70,7 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
     <string>Test Extension</string>
 </dict>
 ```
-### Map handlers in class:
+### Map handler via commandIdentifier in class:
 ```objc
 // Implement your modify strategy using block (you can implement as singleton dict)
 // @{ @"commandIdentifier": handlerBlock }
@@ -85,7 +85,7 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
     return _instance;
 }
 ```
-### Handle with regex:
+### * Handle with regex:
 ```objc
 // Override performCommandWithInvocation like that
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
