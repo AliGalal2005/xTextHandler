@@ -83,7 +83,7 @@ Xcode Source Editor 插件集
     return _instance;
 }
 ```
-### 处理正则表达式
+### * 处理正则表达式
 ```objc
 // 重写这个方法，使用 select 方法传递你需要的正则表达式
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
