@@ -10,6 +10,7 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 - Multiline Selections
 - Multiple Extensions
 - Extendable API
+- Clipboard Text Handling (if select nothing)
 - Regular Expression Matching
 
 ## xEncode
@@ -95,7 +96,6 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 
 # TODO
 - More strategy for xFormat
-- Clipboard text support
 - Error handling
 - Preferences panel
 - JavaScript for text handling
