@@ -70,6 +70,14 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>GitHub</string>
 				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xSearchCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xsearch.dict</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Dictionary</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>xSearchExtension</string>

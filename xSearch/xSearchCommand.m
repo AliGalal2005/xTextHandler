@@ -21,6 +21,7 @@
             @"xsearch.translate": ^NSString *(NSString *text) { return Search(text, @"translate"); },
             @"xsearch.stackoverflow": ^NSString *(NSString *text) { return Search(text, @"stackoverflow"); },
             @"xsearch.github": ^NSString *(NSString *text) { return Search(text, @"github"); },
+            @"xsearch.dict":  ^NSString *(NSString *text) { return PerformService(text, @"Look Up in Dictionary"); },
         };
     });
     return _instance;
