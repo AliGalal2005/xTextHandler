@@ -42,6 +42,7 @@ Xcode Source Editor 插件集
 - Developer
 - StackOverflow
 - GitHub
+- Dictionary
 
 ## xFormat
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xFormat.gif)
