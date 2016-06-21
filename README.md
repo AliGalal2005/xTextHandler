@@ -44,6 +44,7 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 - Developer
 - StackOverflow
 - GitHub
+- Dictionary
 
 ## xFormat
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xFormat.gif)
