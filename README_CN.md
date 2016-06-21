@@ -8,6 +8,7 @@ Xcode Source Editor 插件集
 - 支持文本多行选择
 - 支持多个类型的插件
 - 提供易扩展的接口
+- 支持剪贴板文本（当没有选择文本，处理剪贴板文本）
 - 提供基于正则表达式的匹配
 
 ## xEncode
@@ -93,7 +94,6 @@ Xcode Source Editor 插件集
 
 # TODO
 - 更多的格式化策略
-- 剪贴板文本支持
 - 错误处理
 - App 配置面板
 - JavaScript 组件
