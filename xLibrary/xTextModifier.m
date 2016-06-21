@@ -8,6 +8,7 @@
 
 #import "xTextModifier.h"
 #import "xTextMatcher.h"
+#import <AppKit/AppKit.h>
 
 @implementation xTextModifier
 
@@ -26,10 +27,19 @@
         // match clipped text
         xTextMatchResult *match = [xTextMatcher match:range invocation:invocation];
         
+        if (match.clipboard) { // handle clipboard text
+            if (match.text) {
+                [[NSPasteboard generalPasteboard] declareTypes:@[NSPasteboardTypeString] owner:nil];
+                [[NSPasteboard generalPasteboard] setString:handler(match.text) forType:NSPasteboardTypeString];
+            }
+            continue;
+        }
+        
         if (match.text.length == 0) {
             continue;
         }
         
+        // handle selected text
         NSMutableArray<NSString *> *texts = [NSMutableArray array];
         
         if (regex) { // match using regex

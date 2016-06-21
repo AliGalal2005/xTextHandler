@@ -18,6 +18,25 @@ static NSString *const xTextHandlerRadixPattern     = @"([0-9]+)";              
 
 @property (nonatomic, copy) NSString *text;         // text for each lines
 @property (nonatomic, assign) NSRange range;        // clipped text range
+@property (nonatomic, assign) BOOL clipboard;       // is clipboard text
+
+
+/**
+ Result from clipboard text
+
+ @return xTextMatchResult
+ */
++ (instancetype)clipboardResult;
+
+/**
+ Result with text & clipped text
+
+ @param text    text
+ @param clipped clipped text
+
+ @return xTextMatchResult
+ */
++ (instancetype)resultWithText:(NSString *)text clipped:(NSString *)clipped;
 
 @end
 

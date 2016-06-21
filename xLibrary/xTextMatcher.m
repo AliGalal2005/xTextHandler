@@ -7,10 +7,28 @@
 //
 
 #import "xTextMatcher.h"
+#import <AppKit/AppKit.h>
+
+static const NSInteger xTextInvalidLine = -1;
 
 typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSString *clipped);
 
 @implementation xTextMatchResult
+
++ (instancetype)clipboardResult {
+    xTextMatchResult *result = [[xTextMatchResult alloc] init];
+    result.text = [[NSPasteboard generalPasteboard] stringForType:NSPasteboardTypeString];
+    result.range = NSMakeRange(0, result.text.length);
+    result.clipboard = YES;
+    return result;
+}
+
++ (instancetype)resultWithText:(NSString *)text clipped:(NSString *)clipped {
+    xTextMatchResult *result = [[xTextMatchResult alloc] init];
+    result.text = text;
+    result.range = [text rangeOfString:clipped];
+    return result;
+}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"%@, %@", self.text, NSStringFromRange(self.range)];
@@ -35,8 +53,9 @@ typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSStri
     NSInteger endLine = selection.end.line;
     NSInteger endColumn = selection.end.column;
     
-    // return if selected nothing
+    // handle clipboard if selected nothing
     if (startLine == endLine && startColumn == endColumn) {
+        block(xTextInvalidLine, @"", @"");
         return;
     }
     
@@ -55,11 +74,7 @@ typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSStri
             clipped = line;
         }
         
-        if (clipped == nil || clipped.length == 0) {
-            continue;
-        }
-        
-        if (block) {
+        if (clipped.length > 0 && block) {
             block(index, line, clipped);
         }
     }
@@ -70,16 +85,17 @@ typedef void (^xTextSelectionLineBlock) (NSInteger index, NSString *line, NSStri
     NSMutableString *lineText = [NSMutableString string];
     NSMutableString *clippedText = [NSMutableString string];
     
+    __block BOOL clipboard;
+    
+    // enumerate each lines
     [xTextMatcher enumerate:invocation selection:selection lineBlock:^(NSInteger index, NSString *line, NSString *clipped) {
         [lineText appendString:line];
         [clippedText appendString:clipped];
+        clipboard = (index == xTextInvalidLine);
     }];
     
-    xTextMatchResult *match = [[xTextMatchResult alloc] init];
-    match.text = lineText;
-    match.range = [lineText rangeOfString:clippedText];
-    
-    return match;
+    // clipboard result or selected result
+    return clipboard ? xTextMatchResult.clipboardResult : [xTextMatchResult resultWithText:lineText clipped:clippedText];
 }
 
 @end
