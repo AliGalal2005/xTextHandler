@@ -74,6 +74,14 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>xSearchCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xsearch.dash</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Dash</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xSearchCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xsearch.dict</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Dictionary</string>

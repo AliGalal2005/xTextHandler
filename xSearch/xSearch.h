@@ -20,6 +20,7 @@ static inline NSDictionary *Engines() {
             @"translate": @"http://translate.google.cn/?hl=en#en/zh-CN/%@",
             @"stackoverflow": @"http://stackoverflow.com/search?q=%@",
             @"github": @"https://github.com/search?q=%@",
+            @"dash": @"dash://%@",
         };
     });
     return _instance;

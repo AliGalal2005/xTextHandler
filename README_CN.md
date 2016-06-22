@@ -42,6 +42,7 @@ Xcode Source Editor 插件集
 - Developer
 - StackOverflow
 - GitHub
+- Dash
 - Dictionary
 
 ## xFormat
