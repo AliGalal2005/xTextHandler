@@ -7,25 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <JavaScriptCore/JavaScriptCore.h>
 
 static NSString *FormatJSON(NSString *string) {
-
-    NSError *error;
-    NSString *object = [NSJSONSerialization JSONObjectWithData:[string dataUsingEncoding:NSUTF8StringEncoding]
-                                                       options:NSJSONReadingMutableContainers
-                                                         error:&error];
-    
-    if (error) {
-        return string;
-    }
-    
-    NSData *data = [NSJSONSerialization dataWithJSONObject:object
-                                                   options:NSJSONWritingPrettyPrinted
-                                                     error:&error];
-    
-    if (error) {
-        return string;
-    }
-    
-    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ? : string;
+    JSContext *context = [[JSContext alloc] init];
+    JSValue *parse = context[@"JSON"][@"parse"];
+    JSValue *stringify = context[@"JSON"][@"stringify"];
+    JSValue *pretty = [stringify callWithArguments:@[
+        [parse callWithArguments:@[string]],
+        [JSValue valueWithNullInContext:context],
+        @"    " // align with 4 spaces
+    ]];
+    return pretty.isUndefined ? string : pretty.toString;
 }
