@@ -15,7 +15,7 @@
 + (void)select:(XCSourceEditorCommandInvocation *)invocation pattern:(NSString *)pattern handler:(xTextHandlerBlock)handler {
     
     NSRegularExpression *regex;
-    if (![pattern isEqualToString:xTextHandlerAnyPattern]) {
+    if (pattern) {
         regex = [NSRegularExpression regularExpressionWithPattern:pattern
                                                           options:0
                                                             error:nil];
@@ -74,7 +74,7 @@
 }
 
 + (void)any:(XCSourceEditorCommandInvocation *)invocation handler:(xTextHandlerBlock)handler {
-    [self select:invocation pattern:xTextHandlerAnyPattern handler:handler];
+    [self select:invocation pattern:nil handler:handler];
 }
 
 + (void)radix:(XCSourceEditorCommandInvocation *)invocation handler:(xTextHandlerBlock)handler {
