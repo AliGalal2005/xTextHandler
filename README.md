@@ -54,7 +54,7 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 - CSS
 - SQL
 
-* Thanks to: [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
+Thanks to: [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
 
 # Usage
 1. Install Xcode 8
