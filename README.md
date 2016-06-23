@@ -50,6 +50,10 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 ## xFormat
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xFormat.gif)
 - JSON
+- XML
+- CSS
+- SQL
+Thanks to: [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
 
 # Usage
 1. Install Xcode 8
