@@ -48,6 +48,11 @@ Xcode Source Editor 插件集
 ## xFormat
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xFormat.gif)
 - JSON
+- XML
+- CSS
+- SQL
+
+感谢：[vkBeautify](https://github.com/vkiryukhin/vkBeautify)
 
 # 用法
 1. 安装 Xcode 8
