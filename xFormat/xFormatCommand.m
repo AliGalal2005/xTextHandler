@@ -16,7 +16,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = @{
-            @"xformat.json": ^NSString *(NSString *text) { return FormatJSON(text); },
+            @"xformat.json": ^NSString *(NSString *text) { return vkBeautify(text, @"json"); },
+            @"xformat.xml": ^NSString *(NSString *text) { return vkBeautify(text, @"xml"); },
+            @"xformat.css": ^NSString *(NSString *text) { return vkBeautify(text, @"css"); },
+            @"xformat.sql": ^NSString *(NSString *text) { return vkBeautify(text, @"sql"); },
         };
     });
     return _instance;

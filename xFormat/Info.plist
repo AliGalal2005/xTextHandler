@@ -38,6 +38,30 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>JSON</string>
 				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xFormatCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xformat.xml</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>XML</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xFormatCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xformat.css</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>CSS</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>xFormatCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xformat.sql</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>SQL</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>xFormatExtension</string>
