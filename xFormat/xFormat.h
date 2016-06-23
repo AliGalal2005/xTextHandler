@@ -16,7 +16,7 @@ static NSString *FormatJSON(NSString *string) {
     JSValue *pretty = [stringify callWithArguments:@[
         [parse callWithArguments:@[string]],
         [JSValue valueWithNullInContext:context],
-        @"    " // align with 4 spaces
+        @4 // indented 4 spaces
     ]];
     return pretty.isUndefined ? string : pretty.toString;
 }
