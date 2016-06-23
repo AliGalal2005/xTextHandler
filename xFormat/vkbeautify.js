@@ -289,38 +289,4 @@ vkbeautify.prototype.sql = function(text, step) {
     return str;
 }
 
-
-vkbeautify.prototype.xmlmin = function(text, preserveComments) {
-
-    var str = preserveComments ? text :
-        text.replace(/\<![ \r\n\t]*(--([^\-]|[\r\n]|-[^\-])*--[ \r\n\t]*)\>/g, "")
-        .replace(/[ \r\n\t]{1,}xmlns/g, ' xmlns');
-    return str.replace(/>\s{0,}</g, "><");
-}
-
-vkbeautify.prototype.jsonmin = function(text) {
-
-    if (typeof JSON === 'undefined') return text;
-
-    return JSON.stringify(JSON.parse(text), null, 0);
-
-}
-
-vkbeautify.prototype.cssmin = function(text, preserveComments) {
-
-    var str = preserveComments ? text :
-        text.replace(/\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\//g, "");
-
-    return str.replace(/\s{1,}/g, ' ')
-        .replace(/\{\s{1,}/g, "{")
-        .replace(/\}\s{1,}/g, "}")
-        .replace(/\;\s{1,}/g, ";")
-        .replace(/\/\*\s{1,}/g, "/*")
-        .replace(/\*\/\s{1,}/g, "*/");
-}
-
-vkbeautify.prototype.sqlmin = function(text) {
-    return text.replace(/\s{1,}/g, " ").replace(/\s{1,}\(/, "(").replace(/\s{1,}\)/, ")");
-}
-
 var parser = new vkbeautify();
