@@ -19,10 +19,12 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 - Base64 Decode
 - URL Encode
 - URL Decode
-- MD5
 - Upper Case
 - Lower Case
 - Escape
+- MD5
+- SHA1
+- SHA256
 
 ## xRadix
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xRadix.gif)

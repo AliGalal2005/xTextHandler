@@ -66,14 +66,6 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>xencode.md5</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>MD5</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.uppercase</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Upper Case</string>
@@ -94,6 +86,30 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>Escape</string>
 				</dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>xEncodeCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>xencode.md5</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>MD5</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>xEncodeCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>xencode.sha1</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>SHA1</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>xEncodeCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>xencode.sha256</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>SHA256</string>
+                </dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>xEncodeExtension</string>

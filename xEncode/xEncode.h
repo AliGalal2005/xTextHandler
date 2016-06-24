@@ -26,17 +26,6 @@ static inline NSString *Base64Decode(NSString *string) {
     return [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
 }
 
-static inline NSString *MD5(NSString *string) {
-    const char *str = [string UTF8String];
-    unsigned char result[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(str, (uint32_t)strlen(str), result);
-    NSMutableString *ret = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
-        [ret appendFormat:@"%02x", result[i]];
-    }
-    return ret;
-}
-
 static inline NSString *Uppercase(NSString *string) {
     return string.uppercaseString;
 }
@@ -69,4 +58,38 @@ static inline NSString *Escape(NSString *string) {
         }
     }
     return result;
+}
+
+static inline unsigned int BytesLength(NSString *string) {
+    return (unsigned int)[string lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+}
+
+static inline NSString *toHex(unsigned char *data, unsigned int length) {
+    NSMutableString *hash = [NSMutableString stringWithCapacity:length * 2];
+    for (int i = 0; i < length; i++) {
+        [hash appendFormat:@"%02x", data[i]];
+        data[i] = 0;
+    }
+    return hash;
+}
+
+static inline NSString *MD5(NSString *string) {
+    unsigned int length = CC_MD5_DIGEST_LENGTH;
+    unsigned char output[length];
+    CC_MD5(string.UTF8String, BytesLength(string), output);
+    return toHex(output, length);
+}
+
+static inline NSString *SHA1(NSString *string) {
+    unsigned int length = CC_SHA1_DIGEST_LENGTH;
+    unsigned char output[length];
+    CC_SHA1(string.UTF8String, BytesLength(string), output);
+    return toHex(output, length);
+}
+
+static inline NSString *SHA256(NSString *string) {
+    unsigned int length = CC_SHA256_DIGEST_LENGTH;
+    unsigned char output[length];
+    CC_SHA256(string.UTF8String, BytesLength(string), output);
+    return toHex(output, length);
 }
