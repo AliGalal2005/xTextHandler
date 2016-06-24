@@ -9,4 +9,5 @@
 #import "xTextCommand.h"
 
 @interface xFormatCommand : xTextCommand
+
 @end

@@ -102,7 +102,6 @@ Xcode Source Editor 插件集
 ```
 
 # TODO
-- 更多的格式化策略
 - 错误处理
 - App 配置面板
 - JavaScript 组件

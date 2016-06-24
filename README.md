@@ -104,7 +104,6 @@ Thanks to: [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
 ```
 
 # TODO
-- More strategy for xFormat
 - Error handling
 - Preferences panel
 - JavaScript for text handling
