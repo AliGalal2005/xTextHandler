@@ -107,6 +107,7 @@ Thanks to: [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
 - Error handling
 - Preferences panel
 - JavaScript for text handling
+- Rewrite using Swift
 
 # Tips
 Since Xcode 8.0 beta (8S128d) is totally unstable now, you may see nothing after you build & run this project :(
