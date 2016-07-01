@@ -7,6 +7,8 @@
 //
 
 #import <CommonCrypto/CommonDigest.h>
+#import <CoreImage/CoreImage.h>
+#import <AppKit/AppKit.h>
 
 static inline NSString *URLEncode(NSString *string) {
     return [string stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
@@ -92,4 +94,31 @@ static inline NSString *SHA256(NSString *string) {
     unsigned char output[length];
     CC_SHA256(string.UTF8String, BytesLength(string), output);
     return toHex(output, length);
+}
+
+static inline NSString *AppDocumentsPath(NSString *name) {
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:name];
+}
+
+static inline NSString *QRCode(NSString *string) {
+    
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    [filter setValue:data forKey:@"inputMessage"];
+    [filter setValue:@"M" forKey:@"inputCorrectionLevel"];
+    NSCIImageRep *rep = [NSCIImageRep imageRepWithCIImage:filter.outputImage];
+    NSImage *image = [[NSImage alloc] initWithSize:CGSizeMake(400, 400)];
+    [image addRepresentation:rep];
+    
+    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+    [pasteboard clearContents];
+    [pasteboard writeObjects:@[image]];
+    
+//    NSData *imageData = [image TIFFRepresentation];
+//    NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
+//    imageData = [imageRep representationUsingType:NSJPEGFileType properties:@{ NSImageCompressionFactor: @(1) }];
+//    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"qrcode.jpg"];
+//    [imageData writeToFile:path atomically:NO];
+    
+    return string;
 }

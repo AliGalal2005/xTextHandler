@@ -26,6 +26,7 @@
             @"xencode.md5": ^NSString *(NSString *text) { return MD5(text); },
             @"xencode.sha1": ^NSString *(NSString *text) { return SHA1(text); },
             @"xencode.sha256": ^NSString *(NSString *text) { return SHA256(text); },
+            @"xencode.qrcode": ^NSString *(NSString *text) { return QRCode(text); },
         };
     });
     return _instance;
