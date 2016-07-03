@@ -25,6 +25,7 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 - MD5
 - SHA1
 - SHA256
+- QR Code
 
 ## xRadix
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xRadix.gif)
