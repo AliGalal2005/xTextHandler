@@ -23,6 +23,7 @@ Xcode Source Editor 插件集
 - MD5
 - SHA1
 - SHA256
+- QR Code
 
 ## xRadix
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xRadix.gif)
