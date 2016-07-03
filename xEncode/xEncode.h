@@ -123,10 +123,6 @@ static inline NSImage *CreateImage(CIImage *image, CGFloat size) {
     return result;
 }
 
-static inline NSString *AppDocumentsPath(NSString *name) {
-    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:name];
-}
-
 static inline NSString *QRCode(NSString *string) {
     
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
