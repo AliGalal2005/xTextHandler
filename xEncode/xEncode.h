@@ -10,6 +10,8 @@
 #import <CoreImage/CoreImage.h>
 #import <AppKit/AppKit.h>
 
+#define DOWNLOADS_PATH  [NSSearchPathForDirectoriesInDomains(NSDownloadsDirectory, NSUserDomainMask, YES) firstObject]
+
 static inline NSString *URLEncode(NSString *string) {
     return [string stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
 }
@@ -96,6 +98,31 @@ static inline NSString *SHA256(NSString *string) {
     return toHex(output, length);
 }
 
+static inline NSImage *CreateImage(CIImage *image, CGFloat size) {
+    CGRect extent = CGRectIntegral(image.extent);
+    CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
+    size_t width = CGRectGetWidth(extent) * scale;
+    size_t height = CGRectGetHeight(extent) * scale;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
+    CGContextRef bitmapRef = CGBitmapContextCreate(nil, width, height, 8, 0, colorSpace, (CGBitmapInfo)kCGImageAlphaNone);
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef bitmapImage = [context createCGImage:image fromRect:extent];
+    CGContextSetInterpolationQuality(bitmapRef, kCGInterpolationNone);
+    CGContextScaleCTM(bitmapRef, scale, scale);
+    CGContextDrawImage(bitmapRef, extent, bitmapImage);
+    CGImageRef scaledImage = CGBitmapContextCreateImage(bitmapRef);
+    CGContextRelease(bitmapRef);
+    CGImageRelease(bitmapImage);
+    if (colorSpace) {
+        CGColorSpaceRelease(colorSpace);
+    }
+    NSImage *result = [[NSImage alloc] initWithCGImage:scaledImage size:CGSizeMake(size, size)];
+    if (scaledImage) {
+        CGImageRelease(scaledImage);
+    }
+    return result;
+}
+
 static inline NSString *AppDocumentsPath(NSString *name) {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:name];
 }
@@ -106,19 +133,17 @@ static inline NSString *QRCode(NSString *string) {
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     [filter setValue:data forKey:@"inputMessage"];
     [filter setValue:@"M" forKey:@"inputCorrectionLevel"];
-    NSCIImageRep *rep = [NSCIImageRep imageRepWithCIImage:filter.outputImage];
-    NSImage *image = [[NSImage alloc] initWithSize:CGSizeMake(400, 400)];
-    [image addRepresentation:rep];
+    NSImage *image = CreateImage(filter.outputImage, 400);
     
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
     [pasteboard clearContents];
     [pasteboard writeObjects:@[image]];
     
-//    NSData *imageData = [image TIFFRepresentation];
-//    NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
-//    imageData = [imageRep representationUsingType:NSJPEGFileType properties:@{ NSImageCompressionFactor: @(1) }];
-//    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"qrcode.jpg"];
-//    [imageData writeToFile:path atomically:NO];
+    NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:image.TIFFRepresentation];
+    NSData *imageData = [imageRep representationUsingType:NSPNGFileType properties:@{}];
+    NSString *path = [DOWNLOADS_PATH stringByAppendingPathComponent:@"qrcode.png"];
+    [imageData writeToFile:path atomically:YES];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL fileURLWithPath:path]];
     
     return string;
 }
