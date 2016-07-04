@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87F33BE91D15A7F500FD5772"
+               BlueprintIdentifier = "876345ED1D2A48A7005E24D0"
                BuildableName = "xColor.appex"
                BlueprintName = "xColor"
                ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -29,7 +29,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+               BlueprintIdentifier = "870BF0861D29E04600214968"
                BuildableName = "xTextHandler.app"
                BlueprintName = "xTextHandler"
                ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87F33BE91D15A7F500FD5772"
+            BlueprintIdentifier = "876345ED1D2A48A7005E24D0"
             BuildableName = "xColor.appex"
             BlueprintName = "xColor"
             ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -71,7 +71,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+            BlueprintIdentifier = "870BF0861D29E04600214968"
             BuildableName = "xTextHandler.app"
             BlueprintName = "xTextHandler"
             ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -91,7 +91,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+            BlueprintIdentifier = "870BF0861D29E04600214968"
             BuildableName = "xTextHandler.app"
             BlueprintName = "xTextHandler"
             ReferencedContainer = "container:xTextHandler.xcodeproj">

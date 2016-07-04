@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87DDF2C11D14D51700C4EB11"
+               BlueprintIdentifier = "8730C1261D29E0E2002E5B56"
                BuildableName = "xEncode.appex"
                BlueprintName = "xEncode"
                ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -29,7 +29,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+               BlueprintIdentifier = "870BF0861D29E04600214968"
                BuildableName = "xTextHandler.app"
                BlueprintName = "xTextHandler"
                ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87DDF2C11D14D51700C4EB11"
+            BlueprintIdentifier = "8730C1261D29E0E2002E5B56"
             BuildableName = "xEncode.appex"
             BlueprintName = "xEncode"
             ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -71,7 +71,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+            BlueprintIdentifier = "870BF0861D29E04600214968"
             BuildableName = "xTextHandler.app"
             BlueprintName = "xTextHandler"
             ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -91,7 +91,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+            BlueprintIdentifier = "870BF0861D29E04600214968"
             BuildableName = "xTextHandler.app"
             BlueprintName = "xTextHandler"
             ReferencedContainer = "container:xTextHandler.xcodeproj">

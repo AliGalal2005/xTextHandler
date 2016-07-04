@@ -32,39 +32,39 @@
 			<array>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xRadixCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xRadixCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xradix.hex</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Hexadecimal</string>
 				</dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xRadixCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xradix.bin</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Binary</string>
-                </dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xRadixCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xradix.oct</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Octonary</string>
-                </dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xRadixCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xradix.dec</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Decimal</string>
-                </dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).xRadixCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xradix.bin</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Binary</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).xRadixCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xradix.oct</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Octonary</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).xRadixCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xradix.dec</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Decimal</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
-			<string>xRadixExtension</string>
+			<string>$(PRODUCT_MODULE_NAME).xRadixExtension</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.dt.Xcode.extension.source-editor</string>

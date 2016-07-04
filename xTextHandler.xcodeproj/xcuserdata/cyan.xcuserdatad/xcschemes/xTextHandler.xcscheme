@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+               BlueprintIdentifier = "870BF0861D29E04600214968"
                BuildableName = "xTextHandler.app"
                BlueprintName = "xTextHandler"
                ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+            BlueprintIdentifier = "870BF0861D29E04600214968"
             BuildableName = "xTextHandler.app"
             BlueprintName = "xTextHandler"
             ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+            BlueprintIdentifier = "870BF0861D29E04600214968"
             BuildableName = "xTextHandler.app"
             BlueprintName = "xTextHandler"
             ReferencedContainer = "container:xTextHandler.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87D8F0931D14CFF9009DA1EE"
+            BlueprintIdentifier = "870BF0861D29E04600214968"
             BuildableName = "xTextHandler.app"
             BlueprintName = "xTextHandler"
             ReferencedContainer = "container:xTextHandler.xcodeproj">

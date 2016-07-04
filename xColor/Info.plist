@@ -32,31 +32,31 @@
 			<array>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xColorCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xColorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xcolor.hex</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>HEX Color</string>
 				</dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xColorCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xcolor.rgb</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>RGB Color</string>
-                </dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>xColorCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>xcolor.preview</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Preview</string>
-                </dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).xColorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xcolor.rgb</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>RGB Color</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).xColorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>xcolor.preview</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Preview</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
-			<string>xColorExtension</string>
+			<string>$(PRODUCT_MODULE_NAME).xColorExtension</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.dt.Xcode.extension.source-editor</string>

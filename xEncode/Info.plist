@@ -32,7 +32,7 @@
 			<array>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.base64encode</string>
 					<key>XCSourceEditorCommandName</key>
@@ -40,7 +40,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.base64decode</string>
 					<key>XCSourceEditorCommandName</key>
@@ -48,7 +48,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.urlencode</string>
 					<key>XCSourceEditorCommandName</key>
@@ -56,7 +56,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.urldecode</string>
 					<key>XCSourceEditorCommandName</key>
@@ -64,7 +64,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.uppercase</string>
 					<key>XCSourceEditorCommandName</key>
@@ -72,7 +72,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.lowercase</string>
 					<key>XCSourceEditorCommandName</key>
@@ -80,7 +80,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.escape</string>
 					<key>XCSourceEditorCommandName</key>
@@ -88,7 +88,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.md5</string>
 					<key>XCSourceEditorCommandName</key>
@@ -96,7 +96,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.sha1</string>
 					<key>XCSourceEditorCommandName</key>
@@ -104,7 +104,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.sha256</string>
 					<key>XCSourceEditorCommandName</key>
@@ -112,7 +112,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xEncodeCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xEncodeCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xencode.qrcode</string>
 					<key>XCSourceEditorCommandName</key>
@@ -120,7 +120,7 @@
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
-			<string>xEncodeExtension</string>
+			<string>$(PRODUCT_MODULE_NAME).xEncodeExtension</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.dt.Xcode.extension.source-editor</string>

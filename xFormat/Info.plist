@@ -32,7 +32,7 @@
 			<array>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xFormatCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xFormatCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xformat.json</string>
 					<key>XCSourceEditorCommandName</key>
@@ -40,7 +40,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xFormatCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xFormatCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xformat.xml</string>
 					<key>XCSourceEditorCommandName</key>
@@ -48,7 +48,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xFormatCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xFormatCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xformat.css</string>
 					<key>XCSourceEditorCommandName</key>
@@ -56,7 +56,7 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>xFormatCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).xFormatCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>xformat.sql</string>
 					<key>XCSourceEditorCommandName</key>
@@ -64,7 +64,7 @@
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
-			<string>xFormatExtension</string>
+			<string>$(PRODUCT_MODULE_NAME).xFormatExtension</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.dt.Xcode.extension.source-editor</string>
