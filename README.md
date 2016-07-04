@@ -1,3 +1,6 @@
+# Let's Swift!
+xTextHandler has been rewrite in Swift, Objective-C version can be found in: https://github.com/cyanzhong/xTextHandler-objc
+
 🇨🇳[中文介绍](https://github.com/cyanzhong/xTextHandler/blob/master/README_CN.md)
 
 # xTextHandler
@@ -108,7 +111,6 @@ Thanks to: [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
 - Error handling
 - Preferences panel
 - JavaScript for text handling
-- Rewrite using Swift
 
 # Tips
 Since Xcode 8.0 beta (8S128d) is totally unstable now, you may see nothing after you build & run this project :(
