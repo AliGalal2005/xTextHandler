@@ -84,26 +84,23 @@ Thanks to: [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
 </dict>
 ```
 ### Map handler via commandIdentifier in class:
-```objc
+```swift
 // Implement your modify strategy using block (you can implement as singleton dict)
-// @{ @"commandIdentifier": handlerBlock }
-- (NSDictionary *)handlers {
-    static NSDictionary *_instance;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = @{
-            @"test.extension": ^NSString *(NSString *text) { return text; }
-        };
-    });
-    return _instance;
+// [ "commandIdentifier": handler ]
+override func handlers() -> Dictionary<String, xTextModifyHandler> {
+    return [
+        "test.extension": { (text: String) -> (String) in text }
+    ]
 }
 ```
 ### * Handle with regex:
-```objc
+```swift
 // Override performCommandWithInvocation like that
-- (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
-    [xTextModifier select:invocation pattern:@"regex" handler:self.handlers[invocation.commandIdentifier]];
-    completionHandler(nil);
+override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (NSError?) -> Void) {
+    if let handler = self.handlers()[invocation.commandIdentifier] {
+        xTextModifier.select(invocation: invocation, pattern: "regex", handler: handler)
+    }
+    completionHandler(nil)
 }
 ```
 
