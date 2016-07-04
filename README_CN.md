@@ -84,24 +84,21 @@ Xcode Source Editor 插件集
 ### 在实现类中映射你需要的处理函数：
 ```objc
 // 在这个字典里面根据 identifier 映射 block，你可以实现一个字典单例
-// @{ @"commandIdentifier": handlerBlock }
-- (NSDictionary *)handlers {
-    static NSDictionary *_instance;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = @{
-            @"test.extension": ^NSString *(NSString *text) { return text; }
-        };
-    });
-    return _instance;
+// [ "commandIdentifier": handler ]
+override func handlers() -> Dictionary<String, xTextModifyHandler> {
+    return [
+        "test.extension": { (text: String) -> (String) in text }
+    ]
 }
 ```
 ### * 处理正则表达式
 ```objc
 // 重写这个方法，使用 select 方法传递你需要的正则表达式
-- (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler {
-    [xTextModifier select:invocation pattern:@"regex" handler:self.handlers[invocation.commandIdentifier]];
-    completionHandler(nil);
+override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (NSError?) -> Void) {
+    if let handler = self.handlers()[invocation.commandIdentifier] {
+        xTextModifier.select(invocation: invocation, pattern: "regex", handler: handler)
+    }
+    completionHandler(nil)
 }
 ```
 
