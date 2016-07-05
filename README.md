@@ -16,6 +16,7 @@ Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 - Multiline Selections
 - Multiple Extensions
 - Extendable API
+- Swift 3.0
 - Clipboard Text Handling (if select nothing)
 - Regular Expression Matching
 
