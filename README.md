@@ -1,4 +1,7 @@
 # Let's Swift!
+![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 xTextHandler has been rewrite in Swift, Objective-C version can be found in: https://github.com/cyanzhong/xTextHandler-objc
 
 🇨🇳[中文介绍](https://github.com/cyanzhong/xTextHandler/blob/master/README_CN.md)
