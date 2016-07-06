@@ -66,7 +66,7 @@ Xcode Source Editor 插件集
 
 # 用法
 1. 安装 Xcode 8
-2. 在 macOS EI Capitan 上面 需要执行 sudo /usr/libexec/xpccachectl
+2. 在 macOS EI Capitan 上面需要执行 sudo /usr/libexec/xpccachectl
 3. 编译运行项目
 4. 选择 Xcode 8 进行调试
 5. 选择文本
