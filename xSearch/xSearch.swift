@@ -19,7 +19,7 @@ let Engines = [
 ]
 
 func Search(string: String, type: String) -> String {
-    if let keyword = string.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed()) {
+    if let keyword = string.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
         let url = Engines[type]! + keyword
         NSWorkspace.shared().open(URL(string: url)!)
     }

@@ -25,7 +25,7 @@ func Base64Decode(string: String) -> String {
 }
 
 func URLEncode(string: String) -> String {
-    return string.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed()) ?? string
+    return string.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? string
 }
 
 func URLDecode(string: String) -> String {

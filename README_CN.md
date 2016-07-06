@@ -66,12 +66,13 @@ Xcode Source Editor 插件集
 
 # 用法
 1. 安装 Xcode 8
-2. 编译运行项目
-3. 选择 Xcode 8 进行调试
-4. 选择文本
-5. 在 Editor 菜单中找到插件
-6. 你可以给每个插件都设置一个独立的快捷键
-7. 这个 [WWDC Session](https://developer.apple.com/videos/play/wwdc2016/414/) 你应该会喜欢
+2. 在 macOS EI Capitan 上面 需要执行 sudo /usr/libexec/xpccachectl
+3. 编译运行项目
+4. 选择 Xcode 8 进行调试
+5. 选择文本
+6. 在 Editor 菜单中找到插件
+7. 你可以给每个插件都设置一个独立的快捷键
+8. 这个 [WWDC Session](https://developer.apple.com/videos/play/wwdc2016/414/) 你应该会喜欢
 
 # 如何实现一个新的 Extension
 ### 在 Plist 中添加定义：
@@ -112,7 +113,7 @@ override func perform(with invocation: XCSourceEditorCommandInvocation, completi
 - JavaScript 组件
 
 # 温馨提示
-因为目前 Xcode 8.0 beta (8S128d) 是非常不稳定的，你在编译运行项目后可能在 Editor 里面找不到菜单 :(
+因为目前 Xcode 8.0 beta 2 (8S162m) 是非常不稳定的，你在编译运行项目后可能在 Editor 里面找不到菜单 :(
 
 # 联系方式
 Weibo: [@StackOverflowError](http://weibo.com/0x00eeee/)
