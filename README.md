@@ -2,7 +2,7 @@
 ![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-xTextHandler has been rewrite in Swift, Objective-C version can be found in: https://github.com/cyanzhong/xTextHandler-objc
+xTextHandler has been rewritten in Swift. The Objective-C version can be found in: https://github.com/cyanzhong/xTextHandler-objc
 
 🇨🇳[中文介绍](https://github.com/cyanzhong/xTextHandler/blob/master/README_CN.md)
 
@@ -10,14 +10,14 @@ xTextHandler has been rewrite in Swift, Objective-C version can be found in: htt
 Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
 
 # What is it
-[Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools, improve text editing experience for Xcode 8, you can extend with simple code
+[Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools to improve the text editing experience of Xcode 8 and provide extensions with simple code.
 
 # Features
 - Multiline Selections
 - Multiple Extensions
 - Extendable API
 - Swift 3.0
-- Clipboard Text Handling (if select nothing)
+- Clipboard Text Handling (if no selection is made)
 - Regular Expression Matching
 
 ## xEncode
