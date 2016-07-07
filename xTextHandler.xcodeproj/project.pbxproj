@@ -138,7 +138,6 @@
 		870BF0911D29E04600214968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		870BF0931D29E04600214968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		872913281D2A21B6001F65C2 /* xEncode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xEncode-Bridging-Header.h"; sourceTree = "<group>"; };
-		8729132C1D2A2466001F65C2 /* xTextHandler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xTextHandler-Bridging-Header.h"; sourceTree = "<group>"; };
 		8730C1271D29E0E2002E5B56 /* xEncode.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = xEncode.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8730C1291D29E0E2002E5B56 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8730C12D1D29E0E2002E5B56 /* xEncode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = xEncode.entitlements; sourceTree = "<group>"; };
@@ -288,7 +287,6 @@
 		8730C11F1D29E07C002E5B56 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8729132C1D2A2466001F65C2 /* xTextHandler-Bridging-Header.h */,
 				870BF08E1D29E04600214968 /* Assets.xcassets */,
 				870BF0901D29E04600214968 /* Main.storyboard */,
 				870BF0931D29E04600214968 /* Info.plist */,
@@ -900,7 +898,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.cyan.xtexthandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "xTextHandler/xTextHandler-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -917,7 +915,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.cyan.xtexthandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "xTextHandler/xTextHandler-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -1111,6 +1109,7 @@
 				87E376BF1D2A59E200A40FB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
