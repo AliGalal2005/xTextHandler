@@ -12,13 +12,13 @@ class xSearchCommand: xTextCommand {
     
     override func handlers() -> Dictionary<String, xTextModifyHandler> {
         return [
-            "xsearch.google": { (text: String) -> (String) in Search(string: text, type: "google") },
-            "xsearch.developer": { (text: String) -> (String) in Search(string: text, type: "developer") },
-            "xsearch.translate": { (text: String) -> (String) in Search(string: text, type: "translate") },
-            "xsearch.stackoverflow": { (text: String) -> (String) in Search(string: text, type: "stackoverflow") },
-            "xsearch.github": { (text: String) -> (String) in Search(string: text, type: "github") },
-            "xsearch.dash": { (text: String) -> (String) in Search(string: text, type: "dash") },
-            "xsearch.dict": { (text: String) -> (String) in PerformService(string: text, name: "Look Up in Dictionary") },
+            "xsearch.google": { text -> String in Search(string: text, type: "google") },
+            "xsearch.developer": { text -> String in Search(string: text, type: "developer") },
+            "xsearch.translate": { text -> String in Search(string: text, type: "translate") },
+            "xsearch.stackoverflow": { text -> String in Search(string: text, type: "stackoverflow") },
+            "xsearch.github": { text -> String in Search(string: text, type: "github") },
+            "xsearch.dash": { text -> String in Search(string: text, type: "dash") },
+            "xsearch.dict": { text -> String in PerformService(string: text, name: "Look Up in Dictionary") },
         ]
     }
 }

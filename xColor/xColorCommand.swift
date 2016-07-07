@@ -13,9 +13,9 @@ class xColorCommand: xTextCommand {
     
     override func handlers() -> Dictionary<String, xTextModifyHandler> {
         return [
-            "xcolor.hex": { (text: String) -> (String) in HexColor(string: text) },
-            "xcolor.rgb": { (text: String) -> (String) in RgbColor(string: text) },
-            "xcolor.preview": { (text: String) -> (String) in PreviewColor(string: text) },
+            "xcolor.hex": { text -> String in HexColor(string: text) },
+            "xcolor.rgb": { text -> String in RgbColor(string: text) },
+            "xcolor.preview": { text -> String in PreviewColor(string: text) },
         ]
     }
     

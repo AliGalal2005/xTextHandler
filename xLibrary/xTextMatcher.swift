@@ -102,7 +102,7 @@ class xTextMatcher {
         var clipboard = false
         
         // enumerate each lines
-        self.enumerate(invocation: invocation, selection: selection) { (index, line, clipped) in
+        self.enumerate(invocation: invocation, selection: selection) { index, line, clipped in
             lineText.append(line)
             clippedText.append(clipped)
             clipboard = (index == xTextInvalidLine)

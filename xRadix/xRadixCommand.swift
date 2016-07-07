@@ -13,10 +13,10 @@ class xRadixCommand: xTextCommand {
     
     override func handlers() -> Dictionary<String, xTextModifyHandler> {
         return [
-            "xradix.hex": { (text: String) -> (String) in Hex(string: text) },
-            "xradix.bin": { (text: String) -> (String) in Bin(string: text) },
-            "xradix.oct": { (text: String) -> (String) in Oct(string: text) },
-            "xradix.dec": { (text: String) -> (String) in Dec(string: text) },
+            "xradix.hex": { text -> String in Hex(string: text) },
+            "xradix.bin": { text -> String in Bin(string: text) },
+            "xradix.oct": { text -> String in Oct(string: text) },
+            "xradix.dec": { text -> String in Dec(string: text) },
         ]
     }
  

@@ -98,19 +98,19 @@ func Crypto(string: String, length: Int, algorithm: (data: NSData, digest: Unsaf
 }
 
 func MD5(string: String) -> String {
-    return Crypto(string: string, length: Int(CC_MD5_DIGEST_LENGTH), algorithm: { (data, digest) in
+    return Crypto(string: string, length: Int(CC_MD5_DIGEST_LENGTH), algorithm: { data, digest in
         CC_MD5(data.bytes, CC_LONG(data.length), digest)
     })
 }
 
 func SHA1(string: String) -> String {
-    return Crypto(string: string, length: Int(CC_SHA1_DIGEST_LENGTH), algorithm: { (data, digest) in
+    return Crypto(string: string, length: Int(CC_SHA1_DIGEST_LENGTH), algorithm: { data, digest in
         CC_SHA1(data.bytes, CC_LONG(data.length), digest)
     })
 }
 
 func SHA256(string: String) -> String {
-    return Crypto(string: string, length: Int(CC_SHA256_DIGEST_LENGTH), algorithm: { (data, digest) in
+    return Crypto(string: string, length: Int(CC_SHA256_DIGEST_LENGTH), algorithm: { data, digest in
         CC_SHA256(data.bytes, CC_LONG(data.length), digest)
     })
 }
