@@ -9,7 +9,6 @@
 import Foundation
 
 class xSearchCommand: xTextCommand {
-    
     override func handlers() -> Dictionary<String, xTextModifyHandler> {
         return [
             "xsearch.google": { text -> String in Search(string: text, type: "google") },

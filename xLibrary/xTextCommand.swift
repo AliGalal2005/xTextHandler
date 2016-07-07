@@ -8,6 +8,7 @@
 
 import XcodeKit
 
+/// Text command with default implemention
 class xTextCommand: NSObject, xTextProtocol {
  
     /// Handlers map

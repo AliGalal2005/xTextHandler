@@ -9,6 +9,7 @@
 import XcodeKit
 import AppKit
 
+/// Text matching & handling
 class xTextModifier {
 
     /// Regular expressions

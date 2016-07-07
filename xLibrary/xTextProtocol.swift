@@ -12,6 +12,7 @@ import XcodeKit
 /// Modify text using this closure
 typealias xTextModifyHandler = (String) -> (String)
 
+/// Text protocol
 protocol xTextProtocol: XCSourceEditorCommand {
     
     /// Handlers map
