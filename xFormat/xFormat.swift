@@ -40,10 +40,8 @@ func vkBeautify(string: String, type: String) -> String {
         }
     }
 
-    if let parser = context.objectForKeyedSubscript("parser").objectForKeyedSubscript(type) {
-        if let pretty = parser.call(withArguments: [ string, xFormatIndentationWidth ]) {
-            return pretty.isUndefined ? string : pretty.toString()
-        }
+    if let parser = context.objectForKeyedSubscript("parser").objectForKeyedSubscript(type), pretty = parser.call(withArguments: [ string, xFormatIndentationWidth ]) {
+        return pretty.isUndefined ? string : pretty.toString()
     }
     
     return string

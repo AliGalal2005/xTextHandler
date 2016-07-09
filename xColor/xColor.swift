@@ -19,22 +19,16 @@ func HexColor(string: String) -> String {
         regex.enumerateMatches(in: string, options: RegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, string.characters.count), using: { result, flags, stop in
             
             let str = string as NSString
-            if let range = result?.range(at: 1) {
-                if let r = Int(str.substring(with: range)) {
-                    hex += String(r, radix: 16)
-                }
+            if let range = result?.range(at: 1), r = Int(str.substring(with: range)) {
+                hex += String(r, radix: 16)
             }
             
-            if let range = result?.range(at: 2) {
-                if let g = Int(str.substring(with: range)) {
-                    hex += String(g, radix: 16)
-                }
+            if let range = result?.range(at: 2), g = Int(str.substring(with: range)) {
+                hex += String(g, radix: 16)
             }
             
-            if let range = result?.range(at: 3) {
-                if let b = Int(str.substring(with: range)) {
-                    hex += String(b, radix: 16)
-                }
+            if let range = result?.range(at: 3), b = Int(str.substring(with: range)) {
+                hex += String(b, radix: 16)
             }
         })
 
