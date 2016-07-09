@@ -18,12 +18,22 @@ class xTextModifier {
     static let xTextHandlerRGBPattern       = "([0-9]+.+[0-9]+.+[0-9]+)"    // match 20, 20, 20 | 20 20 20 ...
     static let xTextHandlerRadixPattern     = "([0-9]+)"                    // match numbers
     
-    /// Select text with regex
+    /// Select text with regex & default option
     ///
     /// - parameter invocation: XCSourceEditorCommandInvocation
     /// - parameter pattern:    regex pattern
     /// - parameter handler:    handler
     static func select(invocation: XCSourceEditorCommandInvocation, pattern: String?, handler: xTextModifyHandler) {
+        self.select(invocation: invocation, pattern: pattern, options: [.selected], handler: handler)
+    }
+    
+    /// Select text with regex
+    ///
+    /// - parameter invocation: XCSourceEditorCommandInvocation
+    /// - parameter pattern:    regex pattern
+    /// - parameter options:    xTextMatchOptions
+    /// - parameter handler:    handler
+    static func select(invocation: XCSourceEditorCommandInvocation, pattern: String?, options: xTextMatchOptions, handler: xTextModifyHandler) {
         
         var regex: RegularExpression?
         
@@ -40,7 +50,7 @@ class xTextModifier {
             
             let range = invocation.buffer.selections[i]
             // match clipped text
-            let match = xTextMatcher.match(selection: range as! XCSourceTextRange, invocation: invocation)
+            let match = xTextMatcher.match(selection: range as! XCSourceTextRange, invocation: invocation, options: options)
             
             if match.clipboard { // handle clipboard text
                 if match.text.characters.count > 0 {
@@ -91,12 +101,21 @@ class xTextModifier {
         }
     }
     
-    /// Select any text
+    /// Select any text with default option
     ///
     /// - parameter invocation: XCSourceEditorCommandInvocation
     /// - parameter handler:    handler
     static func any(invocation: XCSourceEditorCommandInvocation, handler: xTextModifyHandler) {
-        self.select(invocation: invocation, pattern: nil, handler: handler)
+        self.any(invocation: invocation, options: [.selected], handler: handler)
+    }
+    
+    /// Select any text
+    ///
+    /// - parameter invocation: XCSourceEditorCommandInvocation
+    /// - parameter options:    xTextMatchOptions
+    /// - parameter handler:    handler
+    static func any(invocation: XCSourceEditorCommandInvocation, options: xTextMatchOptions, handler: xTextModifyHandler) {
+        self.select(invocation: invocation, pattern: nil, options: options, handler: handler)
     }
     
     /// Select numbers

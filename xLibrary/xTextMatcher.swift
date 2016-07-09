@@ -9,6 +9,13 @@
 import XcodeKit
 import AppKit
 
+struct xTextMatchOptions: OptionSet {
+    let rawValue: Int
+    static let selected     = xTextMatchOptions(rawValue: 0)
+    static let clipboard    = xTextMatchOptions(rawValue: 1 << 0)
+    static let cursor       = xTextMatchOptions(rawValue: 1 << 1)
+}
+
 /// Text match result struct
 struct xTextMatchResult {
     
@@ -50,20 +57,29 @@ class xTextMatcher {
     ///
     /// - parameter invocation:  XCSourceEditorCommandInvocation
     /// - parameter selection:   XCSourceTextRange
+    /// - parameter options:     xTextMatchOptions
     /// - parameter lineHandler: (index, line, clipped)
-    static func enumerate(invocation: XCSourceEditorCommandInvocation, selection: XCSourceTextRange, lineHandler: xTextSelectionLineHandler) {
+    static func enumerate(invocation: XCSourceEditorCommandInvocation, selection: XCSourceTextRange, options: xTextMatchOptions, lineHandler: xTextSelectionLineHandler) {
         
         let startLine = selection.start.line
         let startColumn = selection.start.column
         let endLine = selection.end.line
         let endColumn = selection.end.column
-        
-        // handle clipboard if selected nothing
-        if startLine == endLine && startColumn == endColumn {
+    
+        if options.contains(.clipboard) { // match clipboard
             lineHandler(xTextInvalidLine, "", "")
             return
+        } else if startLine == endLine && startColumn == endColumn { // select nothing
+            if options.contains(.cursor) { // match current line
+                let text = invocation.buffer.lines[startLine] as! String
+                lineHandler(startLine, text, text)
+                return
+            } else { // match clipboard
+                lineHandler(xTextInvalidLine, "", "")
+                return
+            }
         }
-        
+
         // enumerate lines
         for index in startLine...endLine {
             
@@ -86,20 +102,31 @@ class xTextMatcher {
         }
     }
     
-    /// Match texts in XCSourceEditorCommandInvocation
+    /// Match texts in XCSourceEditorCommandInvocation with default option
     ///
     /// - parameter selection:  XCSourceTextRange
     /// - parameter invocation: XCSourceEditorCommandInvocation
     ///
     /// - returns: match result
     static func match(selection: XCSourceTextRange, invocation: XCSourceEditorCommandInvocation) -> xTextMatchResult {
+        return self.match(selection: selection, invocation: invocation, options: [.selected])
+    }
+    
+    /// Match texts in XCSourceEditorCommandInvocation
+    ///
+    /// - parameter selection:  XCSourceTextRange
+    /// - parameter invocation: XCSourceEditorCommandInvocation
+    /// - parameter options:    xTextMatchOptions
+    ///
+    /// - returns: match result
+    static func match(selection: XCSourceTextRange, invocation: XCSourceEditorCommandInvocation, options: xTextMatchOptions) -> xTextMatchResult {
         
         var lineText = ""
         var clippedText = ""
         var clipboard = false
         
         // enumerate each lines
-        self.enumerate(invocation: invocation, selection: selection) { index, line, clipped in
+        self.enumerate(invocation: invocation, selection: selection, options: options) { index, line, clipped in
             lineText.append(line)
             clippedText.append(clipped)
             clipboard = (index == xTextInvalidLine)
