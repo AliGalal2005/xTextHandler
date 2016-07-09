@@ -16,7 +16,6 @@ struct xTextMatchResult {
     var range: NSRange      // replace range
     var clipboard: Bool     // is clipboard text or not
     
-    
     /// Result from text & clipped text
     ///
     /// - parameter aText:   full text
@@ -29,7 +28,6 @@ struct xTextMatchResult {
         clipboard = false
     }
     
-    
     /// Result from clipboard text
     ///
     /// - returns: xTextMatchResult
@@ -40,7 +38,6 @@ struct xTextMatchResult {
         return result
     }
 }
-
 
 /// Match selected lines
 class xTextMatcher {
