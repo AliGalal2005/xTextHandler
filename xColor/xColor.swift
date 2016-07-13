@@ -16,7 +16,7 @@ func HexColor(string: String) -> String {
     
     do {
         let regex = try RegularExpression(pattern: pattern, options: .caseInsensitive)
-        regex.enumerateMatches(in: string, options: RegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, string.characters.count), using: { result, flags, stop in
+        regex.enumerateMatches(in: string, options: [], range: NSMakeRange(0, string.characters.count), using: { result, flags, stop in
             
             let str = string as NSString
             if let range = result?.range(at: 1), r = Int(str.substring(with: range)) {
