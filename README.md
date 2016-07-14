@@ -7,7 +7,7 @@
 🇨🇳[中文介绍](https://github.com/cyanzhong/xTextHandler/blob/master/README_CN.md)
 
 # xTextHandler
-Xcode Source Editor Extension Toolset (Plugins for Xcode 8)
+Xcode Source Editor Extension Tools (Xcode 8 Plugins)
 
 # What is it
 [Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools to improve the text editing experience of `Xcode 8` and provide extensions with simple code.
