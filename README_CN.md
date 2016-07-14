@@ -1,6 +1,6 @@
 # Let's Swift!
-![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)](https://swift.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cyanzhong/xTextHandler/blob/master/LICENSE)
 
 `xTextHandler` 已经完全使用 `Swift` 重写，你可以在这里找到 `Objective-C` 版本：https://github.com/cyanzhong/xTextHandler-objc
 
@@ -116,8 +116,6 @@ override func perform(with invocation: XCSourceEditorCommandInvocation, completi
 因为目前 `Xcode 8.0 beta 2 (8S162m)` 是非常不稳定的，你在编译运行项目后可能在 Editor 里面找不到菜单 :(
 
 # 联系方式
-Weibo: [@StackOverflowError](http://weibo.com/0x00eeee/)
-
-Twitter: [@cyanapps](https://twitter.com/cyanapps)
-
-Email: [log.e@qq.com](mailto:log.e@qq.com)
+[![Weibo](https://img.shields.io/badge/Weibo-%20@StackOverflowError%20-red.svg)](http://weibo.com/0x00eeee/)
+[![Twitter](https://img.shields.io/badge/Twitter-@cyanapps-green.svg)](https://twitter.com/cyanapps)
+[![Email](https://img.shields.io/badge/Email-log.e@qq.com-blue.svg)](mailto:log.e@qq.com)
