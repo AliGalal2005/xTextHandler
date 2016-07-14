@@ -6,7 +6,6 @@
 //  ██╔╝ ██╗   ██║   ███████╗██╔╝ ██╗   ██║
 //  ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝
 //
-//
 //  xSearchCommand.swift
 //  xSearch (https://github.com/cyanzhong/xTextHandler/)
 //

@@ -6,7 +6,6 @@
 //  ██╔╝ ██╗   ██║   ███████╗██╔╝ ██╗   ██║
 //  ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝
 //
-//
 //  xEncodeCommand.swift
 //  xEncode (https://github.com/cyanzhong/xTextHandler/)
 //

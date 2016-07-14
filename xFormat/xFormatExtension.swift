@@ -6,7 +6,6 @@
 //  ██╔╝ ██╗   ██║   ███████╗██╔╝ ██╗   ██║
 //  ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝
 //
-//
 //  xFormatExtension.swift
 //  xFormat (https://github.com/cyanzhong/xTextHandler/)
 //
