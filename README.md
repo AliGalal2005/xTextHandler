@@ -13,12 +13,15 @@ Xcode Source Editor Extension Tools (Xcode 8 Plugins)
 [Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) based tools to improve the text editing experience of `Xcode 8` and provide extensions with simple code.
 
 # Features
-- Multiline Selections
-- Multiple Extensions
-- Extendable API
-- Swift 3.0
-- Clipboard Text Handling (if no selection is made)
-- Regular Expression Matching
+- [x] Multiline Selections
+- [x] Multiple Extensions
+- [x] Extendable API
+- [x] Swift 3.0
+- [x] Clipboard Text Handling (if no selection is made)
+- [x] Regular Expression Matching
+- [ ] Error handling
+- [ ] Preferences panel
+- [ ] JavaScript for text handling
 
 ## xEncode
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xEncode.gif)
@@ -64,7 +67,7 @@ Xcode Source Editor Extension Tools (Xcode 8 Plugins)
 - CSS
 - SQL
 
-Thanks to: [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
+Thanks to: [`vkBeautify`](https://github.com/vkiryukhin/vkBeautify)
 
 # Usage
 1. Install `Xcode 8`
@@ -108,11 +111,6 @@ override func perform(with invocation: XCSourceEditorCommandInvocation, completi
     completionHandler(nil)
 }
 ```
-
-# TODO
-- Error handling
-- Preferences panel
-- JavaScript for text handling
 
 # Tips
 Since `Xcode 8.0 beta 2 (8S162m)` is totally unstable now, you may see nothing after you build & run this project :(
