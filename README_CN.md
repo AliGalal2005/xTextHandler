@@ -11,12 +11,15 @@ Xcode Source Editor 插件集
 基于 [Xcode Source Editor Extension](https://developer.apple.com/videos/play/wwdc2016/414/) 的插件集，提高 `Xcode 8` 的文本处理的体验，你可以通过简单的几行代码扩展它
 
 # 特点
-- 支持文本多行选择
-- 支持多个类型的插件
-- 提供易扩展的接口
-- Swift 3.0
-- 支持剪贴板文本（当没有选择文本，处理剪贴板文本）
-- 提供基于正则表达式的匹配
+- [x] 支持文本多行选择
+- [x] 支持多个类型的插件
+- [x] 提供易扩展的接口
+- [x] Swift 3.0
+- [x] 支持剪贴板文本（当没有选择文本，处理剪贴板文本）
+- [x] 提供基于正则表达式的匹配
+- [ ] 错误处理
+- [ ] App 配置面板
+- [ ] JavaScript 组件
 
 ## xEncode
 ![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/GIFs/xEncode.gif)
@@ -62,7 +65,7 @@ Xcode Source Editor 插件集
 - CSS
 - SQL
 
-感谢：[vkBeautify](https://github.com/vkiryukhin/vkBeautify)
+感谢：[`vkBeautify`](https://github.com/vkiryukhin/vkBeautify)
 
 # 用法
 1. 安装 `Xcode 8`
@@ -106,11 +109,6 @@ override func perform(with invocation: XCSourceEditorCommandInvocation, completi
     completionHandler(nil)
 }
 ```
-
-# TODO
-- 错误处理
-- App 配置面板
-- JavaScript 组件
 
 # 温馨提示
 因为目前 `Xcode 8.0 beta 2 (8S162m)` 是非常不稳定的，你在编译运行项目后可能在 Editor 里面找不到菜单 :(
