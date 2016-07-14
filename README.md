@@ -118,6 +118,6 @@ override func perform(with invocation: XCSourceEditorCommandInvocation, completi
 Since `Xcode 8.0 beta 2 (8S162m)` is totally unstable now, you may see nothing after you build & run this project :(
 
 # Contacts
-[![Weibo](https://img.shields.io/badge/Weibo-%20@StackOverflowError%20-red.svg)](http://weibo.com/0x00eeee/)
-[![Twitter](https://img.shields.io/badge/Twitter-@cyanapps-green.svg)](https://twitter.com/cyanapps)
-[![Email](https://img.shields.io/badge/Email-log.e@qq.com-blue.svg)](mailto:log.e@qq.com)
+[![weibo](https://img.shields.io/badge/Weibo-%20@StackOverflowError%20-red.svg)](http://weibo.com/0x00eeee/)
+[![twitter](https://img.shields.io/badge/Twitter-@cyanapps-green.svg)](https://twitter.com/cyanapps)
+[![email](https://img.shields.io/badge/Email-log.e@qq.com-blue.svg)](mailto:log.e@qq.com)
