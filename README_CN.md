@@ -116,6 +116,6 @@ override func perform(with invocation: XCSourceEditorCommandInvocation, completi
 因为目前 `Xcode 8.0 beta 2 (8S162m)` 是非常不稳定的，你在编译运行项目后可能在 Editor 里面找不到菜单 :(
 
 # 联系方式
-[![Weibo](https://img.shields.io/badge/Weibo-%20@StackOverflowError%20-red.svg)](http://weibo.com/0x00eeee/)
-[![Twitter](https://img.shields.io/badge/Twitter-@cyanapps-green.svg)](https://twitter.com/cyanapps)
-[![Email](https://img.shields.io/badge/Email-log.e@qq.com-blue.svg)](mailto:log.e@qq.com)
+[![Weibo](https://img.shields.io/badge/weibo-%20@StackOverflowError%20-red.svg)](http://weibo.com/0x00eeee/)
+[![Twitter](https://img.shields.io/badge/twitter-@cyanapps-green.svg)](https://twitter.com/cyanapps)
+[![Email](https://img.shields.io/badge/email-log.e@qq.com-blue.svg)](mailto:log.e@qq.com)
