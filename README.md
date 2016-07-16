@@ -15,7 +15,7 @@ Xcode Source Editor Extension Tools (Xcode 8 Plugins)
 # Features
 - [x] Multiline Selections
 - [x] Multiple Extensions
-- [x] Extendable API
+- [x] Extendable (Example: [Dotify](https://github.com/cyanzhong/Dotify))
 - [x] Swift 3.0
 - [x] Clipboard Text Handling (if no selection is made)
 - [x] Regular Expression Matching
