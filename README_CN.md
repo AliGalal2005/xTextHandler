@@ -13,7 +13,7 @@ Xcode Source Editor 插件集
 # 特点
 - [x] 支持文本多行选择
 - [x] 支持多个类型的插件
-- [x] 提供易扩展的接口
+- [x] 易扩展（示例：[Dotify](https://github.com/cyanzhong/Dotify)）
 - [x] Swift 3.0
 - [x] 支持剪贴板文本（当没有选择文本，处理剪贴板文本）
 - [x] 提供基于正则表达式的匹配
