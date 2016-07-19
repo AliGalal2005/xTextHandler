@@ -151,13 +151,13 @@ func QRCode(string: String) -> String {
     if let filter = CIFilter(name: "CIQRCodeGenerator") {
         filter.setValue(data, forKey: "inputMessage")
         filter.setValue("M", forKey: "inputCorrectionLevel")
-        if let output = filter.outputImage, image = createImage(image: output, size: 400) {
+        if let output = filter.outputImage, let image = createImage(image: output, size: 400) {
             // write to pasteboard
             let pasteboard = NSPasteboard.general()
             pasteboard.clearContents()
             pasteboard.writeObjects([image])
             // save file
-            if let tiff = image.tiffRepresentation, dowloads = NSSearchPathForDirectoriesInDomains(.downloadsDirectory, .userDomainMask, true).first {
+            if let tiff = image.tiffRepresentation, let dowloads = NSSearchPathForDirectoriesInDomains(.downloadsDirectory, .userDomainMask, true).first {
                 let path = (dowloads as NSString).appendingPathComponent("qrcode.png")
                 let imageRep = NSBitmapImageRep(data: tiff)
                 let imageData = imageRep?.representation(using: .PNG, properties: [:])
