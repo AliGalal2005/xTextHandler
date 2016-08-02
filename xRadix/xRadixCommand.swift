@@ -27,10 +27,12 @@ class xRadixCommand: xTextCommand {
         ]
     }
  
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (NSError?) -> Void) {
+    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         if let handler = self.handlers()[invocation.commandIdentifier] {
             xTextModifier.radix(invocation: invocation, handler: handler)
         }
         completionHandler(nil)
     }
+    
+    
 }

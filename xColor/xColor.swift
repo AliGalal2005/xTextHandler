@@ -22,19 +22,19 @@ func HexColor(string: String) -> String {
     var hex = ""
     
     do {
-        let regex = try RegularExpression(pattern: pattern, options: .caseInsensitive)
+        let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
         regex.enumerateMatches(in: string, options: [], range: NSMakeRange(0, string.characters.count), using: { result, flags, stop in
             
             let str = string as NSString
-            if let range = result?.range(at: 1), let r = Int(str.substring(with: range)) {
+            if let range = result?.rangeAt(1), let r = Int(str.substring(with: range)) {
                 hex += String(r, radix: 16)
             }
             
-            if let range = result?.range(at: 2), let g = Int(str.substring(with: range)) {
+            if let range = result?.rangeAt(2), let g = Int(str.substring(with: range)) {
                 hex += String(g, radix: 16)
             }
             
-            if let range = result?.range(at: 3), let b = Int(str.substring(with: range)) {
+            if let range = result?.rangeAt(3), let b = Int(str.substring(with: range)) {
                 hex += String(b, radix: 16)
             }
         })
@@ -54,7 +54,7 @@ func RgbColor(string: String) -> String {
 }
 
 func PreviewColor(string: String) -> String {
-    let predicate = Predicate(format: "SELF MATCHES %@", "[0-9a-fA-F]+")
+    let predicate = NSPredicate(format: "SELF MATCHES %@", "[0-9a-fA-F]+")
     let value = predicate.evaluate(with: string) ? string : HexColor(string: string)
     NSWorkspace.shared().open(URL(string: "http://hexpreview.com/\(value)")!)
     return string

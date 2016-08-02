@@ -38,7 +38,7 @@ let xFormatIndentationWidth = 2
 func vkBeautify(string: String, type: String) -> String {
     
     let context = JSContext()!
-    if let path = Bundle.main.pathForResource("vkbeautify", ofType: "js") {
+    if let path = Bundle.main.path(forResource: "vkbeautify", ofType: "js") {
         do {
             let js = try String(contentsOfFile: path, encoding: .utf8)
             context.evaluateScript(js)

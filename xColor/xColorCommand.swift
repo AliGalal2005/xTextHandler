@@ -26,7 +26,7 @@ class xColorCommand: xTextCommand {
         ]
     }
     
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (NSError?) -> Void ) -> Void {
+    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void ) -> Void {
         let identifier = invocation.commandIdentifier
         if let handler = self.handlers()[identifier] {
             if identifier.hasSuffix("hex") {

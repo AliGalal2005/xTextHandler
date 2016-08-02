@@ -42,11 +42,11 @@ class xTextModifier {
     /// - parameter handler:    handler
     static func select(invocation: XCSourceEditorCommandInvocation, pattern: String?, options: xTextMatchOptions, handler: xTextModifyHandler) {
         
-        var regex: RegularExpression?
+        var regex: NSRegularExpression?
         
         if pattern != nil {
             do {
-                try regex = RegularExpression(pattern: pattern!, options: .caseInsensitive)
+                try regex = NSRegularExpression(pattern: pattern!, options: .caseInsensitive)
             } catch {
                 xTextLog(string: "Create regex failed")
             }
@@ -76,7 +76,7 @@ class xTextModifier {
             var texts: Array<String> = []
             if regex != nil { // match using regex
                 regex!.enumerateMatches(in: match.text, options: [], range: match.range, using: { result, flags, stop in
-                    if let range = result?.range(at: 1) {
+                    if let range = result?.rangeAt(1) {
                         texts.append((match.text as NSString).substring(with: range))
                     }
                 })

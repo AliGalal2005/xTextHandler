@@ -95,7 +95,7 @@ func toHex(digest: [UInt8], length: Int) -> String {
 }
 
 func Crypto(string: String, length: Int, algorithm: (data: NSData, digest: UnsafeMutablePointer<UInt8>) -> ()) -> String {
-    let digest = UnsafeMutablePointer<UInt8>(allocatingCapacity: length)
+    let digest = UnsafeMutablePointer<UInt8>.allocate(capacity: length)
     if let data: NSData = string.data(using: .utf8) {
         algorithm(data: data, digest: digest)
         return toHex(digest: Array(UnsafeBufferPointer(start: digest, count: length)), length: length)
@@ -134,7 +134,7 @@ func createImage(image: CIImage, size: CGFloat) -> NSImage? {
         let context = CIContext(options: nil)
         if let bitmapImage = context.createCGImage(image, from: extent) {
             bitmapRef.interpolationQuality = CGInterpolationQuality.none
-            bitmapRef.scale(x: scale, y: scale)
+            bitmapRef.scaleBy(x: scale, y: scale)
             bitmapRef.draw(in: extent, image: bitmapImage)
             if let scaledImage = bitmapRef.makeImage() {
                 return NSImage(cgImage: scaledImage, size: CGSize(width: size, height: size))
