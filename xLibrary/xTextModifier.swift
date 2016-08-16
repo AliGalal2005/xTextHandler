@@ -55,9 +55,9 @@ class xTextModifier {
         // enumerate selections
         for i in 0..<invocation.buffer.selections.count {
             
-            let range = invocation.buffer.selections[i]
+            let range = invocation.buffer.selections[i] as! XCSourceTextRange
             // match clipped text
-            let match = xTextMatcher.match(selection: range as! XCSourceTextRange, invocation: invocation, options: options)
+            let match = xTextMatcher.match(selection: range, invocation: invocation, options: options)
             
             if match.clipboard { // handle clipboard text
                 if match.text.characters.count > 0 {

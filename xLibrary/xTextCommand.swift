@@ -30,7 +30,7 @@ class xTextCommand: NSObject, xTextProtocol {
     /// If you want to match text with your pattern, override this method in subclas
     /// - parameter invocation:        XCSourceEditorCommandInvocation
     /// - parameter completionHandler: nil or Error    
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
         if let handler = self.handlers()[invocation.commandIdentifier] {
             xTextModifier.any(invocation: invocation, handler: handler)
         }
