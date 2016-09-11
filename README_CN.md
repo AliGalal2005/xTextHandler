@@ -68,14 +68,14 @@ Xcode Source Editor 插件集
 感谢：[`vkBeautify`](https://github.com/vkiryukhin/vkBeautify)
 
 # 用法
-1. 安装 `Xcode 8`
-2. 在 `macOS EI Capitan` 上面需要执行 `sudo /usr/libexec/xpccachectl`
+0. 安装 `Xcode 8`
+1. 在 `macOS EI Capitan` 上面需要执行 `sudo /usr/libexec/xpccachectl`
+2. 对每一个 target 进行签名，包括 app 和 extensions
 3. 编译运行项目
-4. 选择 `Xcode 8` 进行调试
+4. 选择 `Xcode 8` 进行调试（或者重启 Xcode）
 5. 选择文本
 6. 在 `Editor` 菜单中找到插件
 7. 你可以给每个插件都设置一个独立的`快捷键`
-8. 这个 [WWDC Session](https://developer.apple.com/videos/play/wwdc2016/414/) 你应该会喜欢
 
 # 如何实现一个新的 Extension
 ### 在 `Plist` 中添加定义：
@@ -109,9 +109,6 @@ override func perform(with invocation: XCSourceEditorCommandInvocation, completi
     completionHandler(nil)
 }
 ```
-
-# 温馨提示
-因为目前 `Xcode 8.0 beta 2 (8S162m)` 是非常不稳定的，你在编译运行项目后可能在 Editor 里面找不到菜单 :(
 
 # 联系方式
 [![Weibo](https://img.shields.io/badge/weibo-%20@StackOverflowError%20-red.svg)](http://weibo.com/0x00eeee/)

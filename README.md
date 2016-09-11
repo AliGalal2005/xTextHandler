@@ -70,14 +70,14 @@ Xcode Source Editor Extension Tools (Xcode 8 Plugins)
 Thanks to: [`vkBeautify`](https://github.com/vkiryukhin/vkBeautify)
 
 # Usage
-1. Install `Xcode 8`
-2. `sudo /usr/libexec/xpccachectl` in `macOS EI Capitan`
+0. Install `Xcode 8`
+1. `sudo /usr/libexec/xpccachectl` in `macOS EI Capitan`
+2. Sign every targets (app & extensions) using your developer certificate
 3. Build & Run
-4. Choose `Xcode 8` to debug
+4. Choose `Xcode 8` to debug (Or restart Xcode)
 5. Select text
 6. Open `Editor` menu to find extensions
 7. You can set a shortcut (`Key-Binding`) for each extension
-8. Maybe you will like this [WWDC Session](https://developer.apple.com/videos/play/wwdc2016/414/)
 
 # How to write a new Extension
 ### Add definition in `Plist`:
@@ -111,9 +111,6 @@ override func perform(with invocation: XCSourceEditorCommandInvocation, completi
     completionHandler(nil)
 }
 ```
-
-# Tips
-Since `Xcode 8.0 beta 2 (8S162m)` is totally unstable now, you may see nothing after you build & run this project :(
 
 # Contacts
 [![Weibo](https://img.shields.io/badge/weibo-%20@StackOverflowError%20-red.svg)](http://weibo.com/0x00eeee/)
