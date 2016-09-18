@@ -16,6 +16,7 @@
 import XcodeKit
 import AppKit
 
+/// Match options
 struct xTextMatchOptions: OptionSet {
     let rawValue: Int
     static let selected     = xTextMatchOptions(rawValue: 0)
