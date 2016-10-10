@@ -6,7 +6,7 @@
 //  ██╔╝ ██╗   ██║   ███████╗██╔╝ ██╗   ██║
 //  ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝
 //
-//  ViewController.swift
+//  AppViewController.swift
 //  xTextHandler (https://github.com/cyanzhong/xTextHandler/)
 //
 //  Created by cyan on 16/7/4.
@@ -15,7 +15,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class AppViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
