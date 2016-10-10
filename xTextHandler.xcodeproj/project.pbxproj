@@ -27,6 +27,7 @@
 		8730C1351D29E0E2002E5B56 /* xEncode.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8730C1271D29E0E2002E5B56 /* xEncode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8730C13B1D29E0FB002E5B56 /* xTextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730C13A1D29E0FB002E5B56 /* xTextProtocol.swift */; };
 		8730C13D1D29E21B002E5B56 /* xTextMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730C13C1D29E21B002E5B56 /* xTextMatcher.swift */; };
+		8740D3941DABDA2D005EF91C /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8740D3931DABDA2D005EF91C /* AppIcon.icns */; };
 		874151E01D2A1AB400BC13F9 /* xEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874151DF1D2A1AB400BC13F9 /* xEncode.swift */; };
 		8749ECB91D2A55FD00099B9C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8730C1291D29E0E2002E5B56 /* Cocoa.framework */; };
 		8749ECBE1D2A55FD00099B9C /* xSearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8749ECBD1D2A55FD00099B9C /* xSearchExtension.swift */; };
@@ -147,6 +148,7 @@
 		8730C1321D29E0E2002E5B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8730C13A1D29E0FB002E5B56 /* xTextProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xTextProtocol.swift; sourceTree = "<group>"; };
 		8730C13C1D29E21B002E5B56 /* xTextMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xTextMatcher.swift; sourceTree = "<group>"; };
+		8740D3931DABDA2D005EF91C /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		874151DF1D2A1AB400BC13F9 /* xEncode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xEncode.swift; sourceTree = "<group>"; };
 		8749ECB81D2A55FD00099B9C /* xSearch.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = xSearch.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8749ECBC1D2A55FD00099B9C /* xSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = xSearch.entitlements; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 		8730C11F1D29E07C002E5B56 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8740D3931DABDA2D005EF91C /* AppIcon.icns */,
 				870BF08E1D29E04600214968 /* Assets.xcassets */,
 				870BF0901D29E04600214968 /* Main.storyboard */,
 				870BF0931D29E04600214968 /* Info.plist */,
@@ -616,6 +619,7 @@
 			files = (
 				870BF08F1D29E04600214968 /* Assets.xcassets in Resources */,
 				870BF0921D29E04600214968 /* Main.storyboard in Resources */,
+				8740D3941DABDA2D005EF91C /* AppIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +792,7 @@
 				CODE_SIGN_ENTITLEMENTS = xRadix/xRadix.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xRadix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -804,6 +809,7 @@
 				CODE_SIGN_ENTITLEMENTS = xRadix/xRadix.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xRadix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -909,6 +915,7 @@
 				CODE_SIGN_ENTITLEMENTS = xTextHandler/xTextHandler.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xTextHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.cyan.xtexthandler;
@@ -928,6 +935,7 @@
 				CODE_SIGN_ENTITLEMENTS = xTextHandler/xTextHandler.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xTextHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.cyan.xtexthandler;
@@ -944,6 +952,7 @@
 				CODE_SIGN_ENTITLEMENTS = xEncode/xEncode.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xEncode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -963,6 +972,7 @@
 				CODE_SIGN_ENTITLEMENTS = xEncode/xEncode.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xEncode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -980,6 +990,7 @@
 				CODE_SIGN_ENTITLEMENTS = xSearch/xSearch.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -996,6 +1007,7 @@
 				CODE_SIGN_ENTITLEMENTS = xSearch/xSearch.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1012,6 +1024,7 @@
 				CODE_SIGN_ENTITLEMENTS = xColor/xColor.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xColor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1028,6 +1041,7 @@
 				CODE_SIGN_ENTITLEMENTS = xColor/xColor.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xColor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1044,6 +1058,7 @@
 				CODE_SIGN_ENTITLEMENTS = xFormat/xFormat.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xFormat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1060,6 +1075,7 @@
 				CODE_SIGN_ENTITLEMENTS = xFormat/xFormat.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCKG8FBVG6;
 				INFOPLIST_FILE = xFormat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

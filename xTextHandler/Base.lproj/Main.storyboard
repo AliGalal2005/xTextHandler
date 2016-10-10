@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
@@ -650,7 +650,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="AppWindowController" customModule="xTextHandler" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="xTextHandler" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -720,6 +720,14 @@
                                     </connections>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0pf-EA-9XO">
+                                <rect key="frame" x="89" y="169" width="303" height="61"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="xTextHandler" id="dmU-9N-axH">
+                                    <font key="font" size="42" name="LucidaFax-Demi"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="bxv-R3-uC6" firstAttribute="trailing" secondItem="PXQ-TU-EU2" secondAttribute="trailing" id="Fce-wa-kpC"/>
@@ -729,8 +737,10 @@
                             <constraint firstItem="gPp-Oe-MEW" firstAttribute="trailing" secondItem="6DO-tb-h1S" secondAttribute="trailing" id="QRg-xU-7rC"/>
                             <constraint firstItem="bxv-R3-uC6" firstAttribute="leading" secondItem="PXQ-TU-EU2" secondAttribute="leading" id="UBF-aU-MPV"/>
                             <constraint firstItem="PXQ-TU-EU2" firstAttribute="top" secondItem="gPp-Oe-MEW" secondAttribute="bottom" constant="8" id="XUm-uu-fzh"/>
+                            <constraint firstItem="0pf-EA-9XO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="gN8-38-3ew"/>
                             <constraint firstAttribute="trailing" secondItem="6DO-tb-h1S" secondAttribute="trailing" constant="8" id="kyY-qN-GuZ"/>
                             <constraint firstItem="PXQ-TU-EU2" firstAttribute="leading" secondItem="gPp-Oe-MEW" secondAttribute="leading" id="mEn-AM-vn1"/>
+                            <constraint firstItem="0pf-EA-9XO" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="qjH-QC-S75"/>
                             <constraint firstItem="bxv-R3-uC6" firstAttribute="top" secondItem="PXQ-TU-EU2" secondAttribute="bottom" constant="8" id="qwe-kj-fmm"/>
                             <constraint firstItem="gPp-Oe-MEW" firstAttribute="top" secondItem="6DO-tb-h1S" secondAttribute="bottom" constant="8" id="r0y-gG-y4G"/>
                             <constraint firstItem="gPp-Oe-MEW" firstAttribute="leading" secondItem="6DO-tb-h1S" secondAttribute="leading" id="tYG-H1-ofp"/>
