@@ -676,6 +676,65 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6DO-tb-h1S">
+                                <rect key="frame" x="8" y="96" width="464" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="EG0-Jh-tgB"/>
+                                </constraints>
+                                <buttonCell key="cell" type="roundTextured" title="How to use xTextHandler" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JTa-3w-W4D">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="usage:" target="XfG-lQ-9wD" id="BK3-o6-sDp"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gPp-Oe-MEW">
+                                <rect key="frame" x="8" y="66" width="464" height="25"/>
+                                <buttonCell key="cell" type="roundTextured" title="What is Xcode Source Editor Extension" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HDy-lk-TiZ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="basic:" target="XfG-lQ-9wD" id="iZN-HK-a4t"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PXQ-TU-EU2">
+                                <rect key="frame" x="8" y="36" width="464" height="25"/>
+                                <buttonCell key="cell" type="roundTextured" title="How to write an Extension" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O5g-uB-mkR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="session:" target="XfG-lQ-9wD" id="WxI-a7-rXt"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-R3-uC6">
+                                <rect key="frame" x="8" y="6" width="464" height="25"/>
+                                <buttonCell key="cell" type="roundTextured" title="Follow me on GitHub" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mvj-fa-Qxh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="github:" target="XfG-lQ-9wD" id="rlk-tG-tt7"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bxv-R3-uC6" firstAttribute="trailing" secondItem="PXQ-TU-EU2" secondAttribute="trailing" id="Fce-wa-kpC"/>
+                            <constraint firstAttribute="bottom" secondItem="bxv-R3-uC6" secondAttribute="bottom" constant="8" id="Hm8-ci-cR5"/>
+                            <constraint firstItem="PXQ-TU-EU2" firstAttribute="trailing" secondItem="gPp-Oe-MEW" secondAttribute="trailing" id="Lbs-qZ-EHe"/>
+                            <constraint firstItem="6DO-tb-h1S" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="Q4I-Zj-cVy"/>
+                            <constraint firstItem="gPp-Oe-MEW" firstAttribute="trailing" secondItem="6DO-tb-h1S" secondAttribute="trailing" id="QRg-xU-7rC"/>
+                            <constraint firstItem="bxv-R3-uC6" firstAttribute="leading" secondItem="PXQ-TU-EU2" secondAttribute="leading" id="UBF-aU-MPV"/>
+                            <constraint firstItem="PXQ-TU-EU2" firstAttribute="top" secondItem="gPp-Oe-MEW" secondAttribute="bottom" constant="8" id="XUm-uu-fzh"/>
+                            <constraint firstAttribute="trailing" secondItem="6DO-tb-h1S" secondAttribute="trailing" constant="8" id="kyY-qN-GuZ"/>
+                            <constraint firstItem="PXQ-TU-EU2" firstAttribute="leading" secondItem="gPp-Oe-MEW" secondAttribute="leading" id="mEn-AM-vn1"/>
+                            <constraint firstItem="bxv-R3-uC6" firstAttribute="top" secondItem="PXQ-TU-EU2" secondAttribute="bottom" constant="8" id="qwe-kj-fmm"/>
+                            <constraint firstItem="gPp-Oe-MEW" firstAttribute="top" secondItem="6DO-tb-h1S" secondAttribute="bottom" constant="8" id="r0y-gG-y4G"/>
+                            <constraint firstItem="gPp-Oe-MEW" firstAttribute="leading" secondItem="6DO-tb-h1S" secondAttribute="leading" id="tYG-H1-ofp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
