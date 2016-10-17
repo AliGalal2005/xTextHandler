@@ -1,3 +1,6 @@
+# 下载
+<a href="https://itunes.apple.com/app/id1163761963">![](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/mas.svg)</a>
+
 # Let's Swift!
 [![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)](https://swift.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cyanzhong/xTextHandler/blob/master/LICENSE)
@@ -67,7 +70,14 @@ Xcode Source Editor 插件集
 
 感谢：[`vkBeautify`](https://github.com/vkiryukhin/vkBeautify)
 
-# 用法
+# 下载安装
+0. 如果之前编译过 xTextHandler，清除 DrivedData
+1. 在这里安装：https://itunes.apple.com/app/id1163761963
+2. 打开 Xcode 并选择文本
+3. 在 `Editor` 菜单中找到插件
+4. 你可以给每个插件都设置一个独立的`快捷键`
+
+# 编译安装
 0. 安装 `Xcode 8`
 1. 在 `macOS EI Capitan` 上面需要执行 `sudo /usr/libexec/xpccachectl`
 2. 对每一个 target 进行签名，包括 app 和 extensions

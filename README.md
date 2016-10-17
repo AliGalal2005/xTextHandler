@@ -1,3 +1,6 @@
+# Download
+<a href="https://itunes.apple.com/app/id1163761963">![](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/mas.svg)</a>
+
 # Let's Swift!
 [![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)](https://swift.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cyanzhong/xTextHandler/blob/master/LICENSE)
@@ -69,7 +72,14 @@ Xcode Source Editor Extension Tools (Xcode 8 Plugins)
 
 Thanks to: [`vkBeautify`](https://github.com/vkiryukhin/vkBeautify)
 
-# Usage
+# Install from Mac App Store
+0. Clear DrivedData if you built xTextHandler before
+1. Install from: https://itunes.apple.com/app/id1163761963
+2. Open Xcode and select text
+3. Open `Editor` menu to find extensions
+4. You can set a shortcut (`Key-Binding`) for each extension
+
+# Build
 0. Install `Xcode 8`
 1. `sudo /usr/libexec/xpccachectl` in `macOS EI Capitan`
 2. Sign every targets (app & extensions) using your developer certificate
