@@ -32,6 +32,7 @@ Xcode Source Editor Extension Tools (Xcode 8 Plugins)
 2. Open Xcode and select text
 3. Open `Editor` menu to find extensions
 4. You can set a shortcut (`Key-Binding`) for each extension
+5. If you got nothing after installed, it must be a bug of XcodeKit, you can try build this project
 
 # Build
 0. Install `Xcode 8`
