@@ -57,7 +57,6 @@ func Escape(string: String) -> String {
             break
         case "\'":
             result.append("\\\'")
-            
             break
         case "\\":
             result.append("\\\\")
