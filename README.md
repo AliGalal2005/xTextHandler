@@ -34,6 +34,10 @@ Xcode Source Editor Extension Tools (Xcode 8 Plugins)
 4. You can set a shortcut (`Key-Binding`) for each extension
 5. If you got nothing after installed, it must be a bug of XcodeKit, you can try build this project
 
+# Setup if there's nothing on the Editor menu
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/Screenshots/tips1.png)
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/Screenshots/tips2.png)
+
 # Build
 0. Install `Xcode 8`
 1. `sudo /usr/libexec/xpccachectl` in `macOS EI Capitan`

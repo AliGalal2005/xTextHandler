@@ -32,6 +32,10 @@ Xcode Source Editor 插件集
 4. 你可以给每个插件都设置一个独立的`快捷键`
 5. 在安装之后你可能找不到菜单，应该是 XcodeKit 的一个 bug，你可以尝试编译安装
 
+# 插件设置
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/Screenshots/tips1.png)
+![image](https://raw.githubusercontent.com/cyanzhong/xTextHandler/master/Screenshots/tips2.png)
+
 # 编译安装
 0. 安装 `Xcode 8`
 1. 在 `macOS EI Capitan` 上面需要执行 `sudo /usr/libexec/xpccachectl`
