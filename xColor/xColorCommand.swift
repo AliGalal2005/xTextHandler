@@ -17,27 +17,27 @@ import Foundation
 import XcodeKit
 
 class xColorCommand: xTextCommand {
-    
-    override func handlers() -> Dictionary<String, xTextModifyHandler> {
-        return [
-            "xcolor.hex": { text -> String in HexColor(string: text) },
-            "xcolor.rgb": { text -> String in RgbColor(string: text) },
-            "xcolor.preview": { text -> String in PreviewColor(string: text) },
-        ]
+  
+  override func handlers() -> Dictionary<String, xTextModifyHandler> {
+    return [
+      "xcolor.hex": { text -> String in HexColor(string: text) },
+      "xcolor.rgb": { text -> String in RgbColor(string: text) },
+      "xcolor.preview": { text -> String in PreviewColor(string: text) },
+    ]
+  }
+  
+  override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping(Error?) -> Void ) -> Void {
+    let identifier = invocation.commandIdentifier
+    if let handler = self.handlers()[identifier] {
+      if identifier.hasSuffix("hex") {
+        xTextModifier.rgb(invocation: invocation, handler: handler)
+      } else if identifier.hasSuffix("rgb") {
+        xTextModifier.hex(invocation: invocation, handler: handler)
+      } else if identifier.hasSuffix("preview") {
+        xTextModifier.any(invocation: invocation, handler: handler)
+      }
     }
-    
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping(Error?) -> Void ) -> Void {
-        let identifier = invocation.commandIdentifier
-        if let handler = self.handlers()[identifier] {
-            if identifier.hasSuffix("hex") {
-                xTextModifier.rgb(invocation: invocation, handler: handler)
-            } else if identifier.hasSuffix("rgb") {
-                xTextModifier.hex(invocation: invocation, handler: handler)
-            } else if identifier.hasSuffix("preview") {
-                xTextModifier.any(invocation: invocation, handler: handler)
-            }
-        }
-        completionHandler(nil)
-    }
-    
+    completionHandler(nil)
+  }
+  
 }

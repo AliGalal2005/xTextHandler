@@ -16,12 +16,12 @@
 import Foundation
 
 class xFormatCommand: xTextCommand {
-    override func handlers() -> Dictionary<String, xTextModifyHandler> {
-        return [
-            "xformat.json": { text -> String in vkBeautify(string: text, type: "json") },
-            "xformat.xml": { text -> String in vkBeautify(string: text, type: "xml") },
-            "xformat.css": { text -> String in vkBeautify(string: text, type: "css") },
-            "xformat.sql": { text -> String in vkBeautify(string: text, type: "sql") },
-        ]
-    }
+  override func handlers() -> Dictionary<String, xTextModifyHandler> {
+    return [
+      "xformat.json": { text -> String in vkBeautify(string: text, type: "json") },
+      "xformat.xml": { text -> String in vkBeautify(string: text, type: "xml") },
+      "xformat.css": { text -> String in vkBeautify(string: text, type: "css") },
+      "xformat.sql": { text -> String in vkBeautify(string: text, type: "sql") },
+    ]
+  }
 }

@@ -17,22 +17,22 @@ import Foundation
 import XcodeKit
 
 class xRadixCommand: xTextCommand {
-    
-    override func handlers() -> Dictionary<String, xTextModifyHandler> {
-        return [
-            "xradix.hex": { text -> String in Hex(string: text) },
-            "xradix.bin": { text -> String in Bin(string: text) },
-            "xradix.oct": { text -> String in Oct(string: text) },
-            "xradix.dec": { text -> String in Dec(string: text) },
-        ]
+  
+  override func handlers() -> Dictionary<String, xTextModifyHandler> {
+    return [
+      "xradix.hex": { text -> String in Hex(string: text) },
+      "xradix.bin": { text -> String in Bin(string: text) },
+      "xradix.oct": { text -> String in Oct(string: text) },
+      "xradix.dec": { text -> String in Dec(string: text) },
+    ]
+  }
+  
+  override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping(Error?) -> Void) {
+    if let handler = self.handlers()[invocation.commandIdentifier] {
+      xTextModifier.radix(invocation: invocation, handler: handler)
     }
- 
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping(Error?) -> Void) {
-        if let handler = self.handlers()[invocation.commandIdentifier] {
-            xTextModifier.radix(invocation: invocation, handler: handler)
-        }
-        completionHandler(nil)
-    }
-    
-    
+    completionHandler(nil)
+  }
+  
+  
 }

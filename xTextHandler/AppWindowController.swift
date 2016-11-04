@@ -9,8 +9,8 @@
 import Cocoa
 
 class AppWindowController: NSWindowController {
-    override func windowDidLoad() {
-        super.windowDidLoad()
-        self.window?.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
-    }
+  override func windowDidLoad() {
+    super.windowDidLoad()
+    self.window?.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
+  }
 }

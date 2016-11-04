@@ -36,20 +36,20 @@ import JavaScriptCore
 let xFormatIndentationWidth = 2
 
 func vkBeautify(string: String, type: String) -> String {
-    
-    let context = JSContext()!
-    if let path = Bundle.main.path(forResource: "vkbeautify", ofType: "js") {
-        do {
-            let js = try String(contentsOfFile: path, encoding: .utf8)
-            context.evaluateScript(js)
-        } catch {
-            xTextLog(string: "Load vkbeautify failed")
-        }
+  
+  let context = JSContext()!
+  if let path = Bundle.main.path(forResource: "vkbeautify", ofType: "js") {
+    do {
+      let js = try String(contentsOfFile: path, encoding: .utf8)
+      context.evaluateScript(js)
+    } catch {
+      xTextLog(string: "Load vkbeautify failed")
     }
-
-    if let parser = context.objectForKeyedSubscript("parser").objectForKeyedSubscript(type), let pretty = parser.call(withArguments: [ string, xFormatIndentationWidth ]) {
-        return pretty.isUndefined ? string : pretty.toString()
-    }
-    
-    return string
+  }
+  
+  if let parser = context.objectForKeyedSubscript("parser").objectForKeyedSubscript(type), let pretty = parser.call(withArguments: [ string, xFormatIndentationWidth ]) {
+    return pretty.isUndefined ? string : pretty.toString()
+  }
+  
+  return string
 }

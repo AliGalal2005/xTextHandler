@@ -17,5 +17,5 @@ import Foundation
 import XcodeKit
 
 class xRadixExtension: NSObject, XCSourceEditorExtension {
-    
+  
 }
