@@ -28,7 +28,7 @@ class xColorCommand: xTextCommand {
   
   override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping(Error?) -> Void ) -> Void {
     let identifier = invocation.commandIdentifier
-    if let handler = self.handlers()[identifier] {
+    if let handler = handlers()[identifier] {
       if identifier.hasSuffix("hex") {
         xTextModifier.rgb(invocation: invocation, handler: handler)
       } else if identifier.hasSuffix("rgb") {

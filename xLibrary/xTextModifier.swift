@@ -31,7 +31,7 @@ class xTextModifier {
   /// - parameter pattern:    regex pattern
   /// - parameter handler:    handler
   static func select(invocation: XCSourceEditorCommandInvocation, pattern: String?, handler: xTextModifyHandler) {
-    self.select(invocation: invocation, pattern: pattern, options: [.selected], handler: handler)
+    select(invocation: invocation, pattern: pattern, options: [.selected], handler: handler)
   }
   
   /// Select text with regex
@@ -114,7 +114,7 @@ class xTextModifier {
   /// - parameter invocation: XCSourceEditorCommandInvocation
   /// - parameter handler:    handler
   static func any(invocation: XCSourceEditorCommandInvocation, handler: xTextModifyHandler) {
-    self.any(invocation: invocation, options: [.selected], handler: handler)
+    any(invocation: invocation, options: [.selected], handler: handler)
   }
   
   /// Select any text
@@ -123,7 +123,7 @@ class xTextModifier {
   /// - parameter options:    xTextMatchOptions
   /// - parameter handler:    handler
   static func any(invocation: XCSourceEditorCommandInvocation, options: xTextMatchOptions, handler: xTextModifyHandler) {
-    self.select(invocation: invocation, pattern: nil, options: options, handler: handler)
+    select(invocation: invocation, pattern: nil, options: options, handler: handler)
   }
   
   /// Select numbers
@@ -131,7 +131,7 @@ class xTextModifier {
   /// - parameter invocation: XCSourceEditorCommandInvocation
   /// - parameter handler:    handler
   static func radix(invocation: XCSourceEditorCommandInvocation, handler: xTextModifyHandler) {
-    self.select(invocation: invocation, pattern: xTextHandlerRadixPattern, handler: handler)
+    select(invocation: invocation, pattern: xTextHandlerRadixPattern, handler: handler)
   }
   
   /// Select hex color
@@ -139,7 +139,7 @@ class xTextModifier {
   /// - parameter invocation: XCSourceEditorCommandInvocation
   /// - parameter handler:    handler
   static func hex(invocation: XCSourceEditorCommandInvocation, handler: xTextModifyHandler) {
-    self.select(invocation: invocation, pattern: xTextHandlerHexPattern, handler: handler)
+    select(invocation: invocation, pattern: xTextHandlerHexPattern, handler: handler)
   }
   
   /// Select RGB color
@@ -147,6 +147,6 @@ class xTextModifier {
   /// - parameter invocation: XCSourceEditorCommandInvocation
   /// - parameter handler:    handler
   static func rgb(invocation: XCSourceEditorCommandInvocation, handler: xTextModifyHandler) {
-    self.select(invocation: invocation, pattern: xTextHandlerRGBPattern, handler: handler)
+    select(invocation: invocation, pattern: xTextHandlerRGBPattern, handler: handler)
   }
 }

@@ -31,7 +31,7 @@ class xTextCommand: NSObject, xTextProtocol {
   /// - parameter invocation:        XCSourceEditorCommandInvocation
   /// - parameter completionHandler: nil or Error
   func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
-    if let handler = self.handlers()[invocation.commandIdentifier] {
+    if let handler = handlers()[invocation.commandIdentifier] {
       xTextModifier.any(invocation: invocation, handler: handler)
     }
     completionHandler(nil)

@@ -28,7 +28,7 @@ class xRadixCommand: xTextCommand {
   }
   
   override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping(Error?) -> Void) {
-    if let handler = self.handlers()[invocation.commandIdentifier] {
+    if let handler = handlers()[invocation.commandIdentifier] {
       xTextModifier.radix(invocation: invocation, handler: handler)
     }
     completionHandler(nil)
