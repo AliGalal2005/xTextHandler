@@ -35,8 +35,8 @@ class AppViewController: NSViewController {
     open("https://developer.apple.com/videos/play/wwdc2016/414/")
   }
   
-  @IBAction func github(_ sender: AnyObject) {
-    open("https://github.com/cyanzhong/")
+  @IBAction func preferences(_ sender: AnyObject) {
+    open(URL(fileURLWithPath: "/System/Library/PreferencePanes/Extensions.prefPane").absoluteString)
   }
 }
 
