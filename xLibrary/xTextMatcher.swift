@@ -95,11 +95,11 @@ class xTextMatcher {
       var clipped: String
       
       if startLine == endLine { // single line
-        clipped = line.substring(with: NSMakeRange(startColumn, endColumn - startColumn + 1))
+        clipped = line.substring(with: NSMakeRange(startColumn, endColumn - startColumn))
       } else if index == startLine { // first line
         clipped = line.substring(from: startColumn)
       } else if index == endLine { // last line
-        clipped = line.substring(to: endColumn + 1)
+        clipped = line.substring(to: endColumn)
       } else { // common line
         clipped = line as String
       }
